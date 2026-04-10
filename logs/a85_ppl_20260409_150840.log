@@ -1,0 +1,537 @@
+============================================================
+Tripwire A.8.5: no-finetune PPL
+============================================================
+
+============================================================
+Running: config=fp16, dataset=wikitext2
+============================================================
+============================================================
+PPL eval: config=fp16, dataset=wikitext2
+============================================================
+
+Loading OLMoE in bf16 on GPU...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<00:37,  4.78it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:40,  4.37it/s]Loading weights:   8%|▊         | 15/179 [00:01<00:15, 10.45it/s]Loading weights:  15%|█▍        | 26/179 [00:02<00:12, 11.91it/s]Loading weights:  21%|██        | 37/179 [00:03<00:10, 13.19it/s]Loading weights:  27%|██▋       | 48/179 [00:04<00:10, 12.96it/s]Loading weights:  33%|███▎      | 59/179 [00:05<00:13,  8.89it/s]Loading weights:  39%|███▉      | 70/179 [00:08<00:15,  7.23it/s]Loading weights:  42%|████▏     | 75/179 [00:08<00:12,  8.49it/s]Loading weights:  45%|████▌     | 81/179 [00:12<00:24,  3.97it/s]Loading weights:  46%|████▋     | 83/179 [00:12<00:22,  4.31it/s]Loading weights:  51%|█████▏    | 92/179 [00:15<00:25,  3.41it/s]Loading weights:  54%|█████▍    | 97/179 [00:16<00:19,  4.23it/s]Loading weights:  58%|█████▊    | 103/179 [00:19<00:25,  2.94it/s]Loading weights:  60%|██████    | 108/179 [00:19<00:18,  3.77it/s]Loading weights:  64%|██████▎   | 114/179 [00:23<00:24,  2.63it/s]Loading weights:  65%|██████▌   | 117/179 [00:23<00:19,  3.13it/s]Loading weights:  68%|██████▊   | 122/179 [00:24<00:13,  4.32it/s]Loading weights:  70%|██████▉   | 125/179 [00:30<00:32,  1.64it/s]Loading weights:  71%|███████   | 127/179 [00:31<00:30,  1.71it/s]Loading weights:  75%|███████▍  | 134/179 [00:31<00:15,  2.96it/s]Loading weights:  76%|███████▌  | 136/179 [00:36<00:28,  1.51it/s]Loading weights:  77%|███████▋  | 138/179 [00:38<00:28,  1.42it/s]Loading weights:  80%|████████  | 144/179 [00:38<00:14,  2.44it/s]Loading weights:  82%|████████▏ | 147/179 [00:44<00:25,  1.27it/s]Loading weights:  83%|████████▎ | 149/179 [00:46<00:25,  1.19it/s]Loading weights:  88%|████████▊ | 157/179 [00:46<00:09,  2.30it/s]Loading weights:  89%|████████▉ | 159/179 [00:52<00:15,  1.31it/s]Loading weights:  93%|█████████▎| 166/179 [00:52<00:05,  2.23it/s]Loading weights:  94%|█████████▍| 169/179 [00:55<00:05,  1.70it/s]Loading weights:  95%|█████████▍| 170/179 [00:57<00:05,  1.50it/s]Loading weights:  99%|█████████▉| 177/179 [00:57<00:00,  2.73it/s]Loading weights: 100%|██████████| 179/179 [00:57<00:00,  3.12it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  loaded in 64s
+
+Loading wikitext2 eval data...
+  wikitext-2 test: 1,294,336 chars
+  tokenized to 288,730 tokens
+
+Running PPL eval (seq_len=2048)...
+  PPL eval: 140 windows of 2048 tokens (~286,720 tokens total)
+    window 2/140  partial PPL=6.155  ETA 720s
+    window 5/140  partial PPL=6.810  ETA 661s
+    window 8/140  partial PPL=6.383  ETA 609s
+    window 11/140  partial PPL=6.784  ETA 580s
+    window 13/140  partial PPL=6.956  ETA 589s
+    window 16/140  partial PPL=7.343  ETA 563s
+    window 19/140  partial PPL=7.131  ETA 540s
+    window 22/140  partial PPL=6.868  ETA 529s
+    window 25/140  partial PPL=6.766  ETA 512s
+    window 28/140  partial PPL=7.007  ETA 499s
+    window 31/140  partial PPL=6.687  ETA 483s
+    window 34/140  partial PPL=6.585  ETA 467s
+    window 37/140  partial PPL=6.471  ETA 455s
+    window 40/140  partial PPL=6.372  ETA 440s
+    window 43/140  partial PPL=6.584  ETA 429s
+    window 46/140  partial PPL=6.747  ETA 414s
+    window 49/140  partial PPL=6.842  ETA 400s
+    window 52/140  partial PPL=6.765  ETA 389s
+    window 55/140  partial PPL=6.648  ETA 374s
+    window 58/140  partial PPL=6.614  ETA 362s
+    window 61/140  partial PPL=6.727  ETA 348s
+    window 64/140  partial PPL=6.697  ETA 334s
+    window 67/140  partial PPL=6.648  ETA 321s
+    window 70/140  partial PPL=6.669  ETA 307s
+    window 73/140  partial PPL=6.706  ETA 294s
+    window 76/140  partial PPL=6.718  ETA 280s
+    window 79/140  partial PPL=6.752  ETA 267s
+    window 82/140  partial PPL=6.733  ETA 254s
+    window 85/140  partial PPL=6.734  ETA 241s
+    window 88/140  partial PPL=6.787  ETA 227s
+    window 91/140  partial PPL=6.887  ETA 215s
+    window 94/140  partial PPL=6.970  ETA 201s
+    window 97/140  partial PPL=6.996  ETA 188s
+    window 100/140  partial PPL=6.710  ETA 175s
+    window 103/140  partial PPL=6.494  ETA 161s
+    window 106/140  partial PPL=6.521  ETA 149s
+    window 109/140  partial PPL=6.515  ETA 135s
+    window 112/140  partial PPL=6.532  ETA 122s
+    window 115/140  partial PPL=6.562  ETA 109s
+    window 118/140  partial PPL=6.586  ETA 96s
+    window 121/140  partial PPL=6.588  ETA 83s
+    window 124/140  partial PPL=6.602  ETA 70s
+    window 127/140  partial PPL=6.613  ETA 57s
+    window 130/140  partial PPL=6.652  ETA 44s
+    window 133/140  partial PPL=6.648  ETA 30s
+    window 136/140  partial PPL=6.677  ETA 17s
+    window 139/140  partial PPL=6.644  ETA 4s
+  PPL = 6.6518 (286,580 tokens, 609s)
+
+Results saved to results/ppl_fp16_wikitext2.json
+
+FINAL PPL: 6.6518
+
+============================================================
+Running: config=fp16, dataset=c4
+============================================================
+============================================================
+PPL eval: config=fp16, dataset=c4
+============================================================
+
+Loading OLMoE in bf16 on GPU...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<01:11,  2.49it/s]Loading weights:   2%|▏         | 4/179 [00:01<00:47,  3.70it/s]Loading weights:   8%|▊         | 15/179 [00:02<00:21,  7.76it/s]Loading weights:  15%|█▍        | 26/179 [00:03<00:17,  8.68it/s]Loading weights:  21%|██        | 37/179 [00:04<00:14,  9.54it/s]Loading weights:  27%|██▋       | 48/179 [00:05<00:11, 11.00it/s]Loading weights:  33%|███▎      | 59/179 [00:06<00:10, 11.12it/s]Loading weights:  36%|███▋      | 65/179 [00:06<00:08, 13.28it/s]Loading weights:  39%|███▉      | 70/179 [00:07<00:11,  9.46it/s]Loading weights:  45%|████▌     | 81/179 [00:08<00:09, 10.50it/s]Loading weights:  51%|█████▏    | 92/179 [00:09<00:09,  9.58it/s]Loading weights:  53%|█████▎    | 94/179 [00:10<00:10,  8.15it/s]Loading weights:  58%|█████▊    | 103/179 [00:11<00:08,  8.68it/s]Loading weights:  60%|██████    | 108/179 [00:11<00:06, 10.52it/s]Loading weights:  64%|██████▎   | 114/179 [00:12<00:08,  7.55it/s]Loading weights:  70%|██████▉   | 125/179 [00:13<00:06,  7.92it/s]Loading weights:  71%|███████   | 127/179 [00:14<00:06,  7.85it/s]Loading weights:  76%|███████▌  | 136/179 [00:15<00:06,  6.36it/s]Loading weights:  79%|███████▉  | 141/179 [00:16<00:06,  6.03it/s]Loading weights:  82%|████████▏ | 147/179 [00:18<00:05,  5.89it/s]Loading weights:  83%|████████▎ | 148/179 [00:19<00:07,  4.36it/s]Loading weights:  88%|████████▊ | 158/179 [00:20<00:04,  4.91it/s]Loading weights:  89%|████████▉ | 159/179 [00:21<00:04,  4.02it/s]Loading weights:  93%|█████████▎| 166/179 [00:21<00:02,  6.19it/s]Loading weights:  94%|█████████▍| 169/179 [00:23<00:02,  4.42it/s]Loading weights:  96%|█████████▌| 171/179 [00:24<00:02,  3.80it/s]Loading weights:  99%|█████████▉| 177/179 [00:24<00:00,  5.83it/s]Loading weights: 100%|██████████| 179/179 [00:24<00:00,  7.28it/s]
+  loaded in 28s
+
+Loading c4 eval data...
+  Streaming C4 validation, target ~300,000 tokens
+  collected 305,481 tokens
+
+Running PPL eval (seq_len=2048)...
+  PPL eval: 146 windows of 2048 tokens (~299,008 tokens total)
+    window 3/146  partial PPL=13.613  ETA 615s
+    window 6/146  partial PPL=12.873  ETA 604s
+    window 9/146  partial PPL=11.724  ETA 585s
+    window 12/146  partial PPL=12.117  ETA 564s
+    window 15/146  partial PPL=12.419  ETA 549s
+    window 18/146  partial PPL=12.281  ETA 527s
+    window 21/146  partial PPL=12.180  ETA 510s
+    window 24/146  partial PPL=12.507  ETA 504s
+    window 27/146  partial PPL=12.635  ETA 489s
+    window 30/146  partial PPL=12.293  ETA 476s
+    window 33/146  partial PPL=12.764  ETA 467s
+    window 36/146  partial PPL=12.848  ETA 451s
+    window 39/146  partial PPL=12.916  ETA 437s
+    window 42/146  partial PPL=12.725  ETA 425s
+    window 45/146  partial PPL=12.391  ETA 409s
+    window 48/146  partial PPL=12.399  ETA 395s
+    window 51/146  partial PPL=12.523  ETA 382s
+    window 54/146  partial PPL=12.431  ETA 368s
+    window 57/146  partial PPL=12.370  ETA 356s
+    window 60/146  partial PPL=12.478  ETA 341s
+    window 63/146  partial PPL=12.272  ETA 329s
+    window 66/146  partial PPL=12.333  ETA 315s
+    window 69/146  partial PPL=12.375  ETA 304s
+    window 72/146  partial PPL=12.400  ETA 291s
+    window 75/146  partial PPL=12.420  ETA 280s
+    window 79/146  partial PPL=12.527  ETA 262s
+    window 82/146  partial PPL=12.567  ETA 249s
+    window 85/146  partial PPL=12.862  ETA 238s
+    window 88/146  partial PPL=12.925  ETA 225s
+    window 91/146  partial PPL=12.819  ETA 213s
+    window 94/146  partial PPL=12.780  ETA 202s
+    window 97/146  partial PPL=12.812  ETA 190s
+    window 100/146  partial PPL=12.814  ETA 177s
+    window 103/146  partial PPL=12.851  ETA 166s
+    window 106/146  partial PPL=12.826  ETA 154s
+    window 109/146  partial PPL=12.813  ETA 142s
+    window 112/146  partial PPL=12.755  ETA 131s
+    window 115/146  partial PPL=12.788  ETA 119s
+    window 118/146  partial PPL=12.760  ETA 107s
+    window 121/146  partial PPL=12.734  ETA 96s
+    window 124/146  partial PPL=12.719  ETA 84s
+    window 127/146  partial PPL=12.629  ETA 73s
+    window 131/146  partial PPL=12.231  ETA 57s
+    window 134/146  partial PPL=12.234  ETA 46s
+    window 137/146  partial PPL=12.248  ETA 34s
+    window 140/146  partial PPL=12.287  ETA 23s
+    window 143/146  partial PPL=12.284  ETA 11s
+    window 146/146  partial PPL=12.243  ETA 0s
+  PPL = 12.2433 (298,862 tokens, 554s)
+
+Results saved to results/ppl_fp16_c4.json
+
+FINAL PPL: 12.2433
+
+============================================================
+Running: config=2bit_noft, dataset=wikitext2
+============================================================
+============================================================
+PPL eval: config=2bit_noft, dataset=wikitext2
+============================================================
+
+Loading OLMoE in bf16 on GPU...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<00:32,  5.44it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:37,  4.70it/s]Loading weights:   8%|▊         | 15/179 [00:01<00:17,  9.60it/s]Loading weights:  15%|█▍        | 26/179 [00:02<00:14, 10.21it/s]Loading weights:  21%|██        | 37/179 [00:04<00:15,  9.36it/s]Loading weights:  27%|██▋       | 48/179 [00:05<00:15,  8.41it/s]Loading weights:  32%|███▏      | 57/179 [00:05<00:10, 11.66it/s]Loading weights:  34%|███▍      | 61/179 [00:07<00:15,  7.41it/s]Loading weights:  39%|███▉      | 70/179 [00:08<00:16,  6.67it/s]Loading weights:  42%|████▏     | 75/179 [00:08<00:12,  8.15it/s]Loading weights:  45%|████▌     | 81/179 [00:10<00:15,  6.53it/s]Loading weights:  50%|████▉     | 89/179 [00:10<00:09,  9.48it/s]Loading weights:  52%|█████▏    | 93/179 [00:11<00:12,  6.86it/s]Loading weights:  58%|█████▊    | 103/179 [00:13<00:11,  6.60it/s]Loading weights:  60%|██████    | 108/179 [00:13<00:08,  8.22it/s]Loading weights:  64%|██████▎   | 114/179 [00:15<00:11,  5.42it/s]Loading weights:  66%|██████▋   | 119/179 [00:15<00:08,  6.92it/s]Loading weights:  70%|██████▉   | 125/179 [00:18<00:14,  3.80it/s]Loading weights:  71%|███████   | 127/179 [00:19<00:13,  3.99it/s]Loading weights:  73%|███████▎  | 131/179 [00:19<00:09,  5.13it/s]Loading weights:  76%|███████▌  | 136/179 [00:21<00:11,  3.63it/s]Loading weights:  79%|███████▉  | 141/179 [00:22<00:08,  4.54it/s]Loading weights:  82%|████████▏ | 147/179 [00:23<00:07,  4.12it/s]Loading weights:  83%|████████▎ | 148/179 [00:24<00:08,  3.79it/s]Loading weights:  88%|████████▊ | 157/179 [00:25<00:03,  5.53it/s]Loading weights:  88%|████████▊ | 158/179 [00:27<00:06,  3.20it/s]Loading weights:  89%|████████▉ | 159/179 [00:27<00:06,  3.28it/s]Loading weights:  92%|█████████▏| 164/179 [00:28<00:03,  3.93it/s]Loading weights:  94%|█████████▍| 169/179 [00:31<00:03,  2.63it/s]Loading weights:  95%|█████████▍| 170/179 [00:31<00:03,  2.41it/s]Loading weights:  98%|█████████▊| 175/179 [00:32<00:01,  3.78it/s]Loading weights: 100%|██████████| 179/179 [00:32<00:00,  5.56it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+  loaded in 35s
+
+Installing 2-bit quantized weights...
+Installing 3136 quantized targets from cache/quantized
+  15/3136 installed (3/s, ETA 1041s)
+  42/3136 installed (4/s, ETA 747s)
+  67/3136 installed (4/s, ETA 698s)
+  93/3136 installed (5/s, ETA 666s)
+  119/3136 installed (5/s, ETA 643s)
+  139/3136 installed (5/s, ETA 658s)
+  165/3136 installed (5/s, ETA 641s)
+  192/3136 installed (5/s, ETA 625s)
+  216/3136 installed (5/s, ETA 620s)
+  245/3136 installed (5/s, ETA 601s)
+  274/3136 installed (5/s, ETA 585s)
+  303/3136 installed (5/s, ETA 571s)
+  325/3136 installed (5/s, ETA 573s)
+  354/3136 installed (5/s, ETA 561s)
+  384/3136 installed (5/s, ETA 548s)
+  408/3136 installed (5/s, ETA 545s)
+  438/3136 installed (5/s, ETA 534s)
+  468/3136 installed (5/s, ETA 524s)
+  490/3136 installed (5/s, ETA 523s)
+  515/3136 installed (5/s, ETA 518s)
+  540/3136 installed (5/s, ETA 514s)
+  568/3136 installed (5/s, ETA 506s)
+  590/3136 installed (5/s, ETA 507s)
+  616/3136 installed (5/s, ETA 501s)
+  645/3136 installed (5/s, ETA 493s)
+  667/3136 installed (5/s, ETA 491s)
+  696/3136 installed (5/s, ETA 483s)
+  727/3136 installed (5/s, ETA 474s)
+  756/3136 installed (5/s, ETA 466s)
+  785/3136 installed (5/s, ETA 459s)
+  809/3136 installed (5/s, ETA 455s)
+  832/3136 installed (5/s, ETA 453s)
+  862/3136 installed (5/s, ETA 446s)
+  892/3136 installed (5/s, ETA 438s)
+  922/3136 installed (5/s, ETA 430s)
+  952/3136 installed (5/s, ETA 423s)
+  981/3136 installed (5/s, ETA 416s)
+  1006/3136 installed (5/s, ETA 412s)
+  1029/3136 installed (5/s, ETA 409s)
+  1059/3136 installed (5/s, ETA 402s)
+  1090/3136 installed (5/s, ETA 394s)
+  1118/3136 installed (5/s, ETA 388s)
+  1145/3136 installed (5/s, ETA 383s)
+  1174/3136 installed (5/s, ETA 376s)
+  1179/3136 installed (5/s, ETA 383s)
+  1208/3136 installed (5/s, ETA 376s)
+  1239/3136 installed (5/s, ETA 369s)
+  1270/3136 installed (5/s, ETA 361s)
+  1300/3136 installed (5/s, ETA 355s)
+  1329/3136 installed (5/s, ETA 348s)
+  1358/3136 installed (5/s, ETA 342s)
+  1374/3136 installed (5/s, ETA 342s)
+  1399/3136 installed (5/s, ETA 338s)
+  1430/3136 installed (5/s, ETA 330s)
+  1461/3136 installed (5/s, ETA 323s)
+  1490/3136 installed (5/s, ETA 317s)
+  1519/3136 installed (5/s, ETA 311s)
+  1543/3136 installed (5/s, ETA 307s)
+  1569/3136 installed (5/s, ETA 302s)
+  1593/3136 installed (5/s, ETA 298s)
+  1624/3136 installed (5/s, ETA 291s)
+  1653/3136 installed (5/s, ETA 285s)
+  1682/3136 installed (5/s, ETA 279s)
+  1713/3136 installed (5/s, ETA 273s)
+  1736/3136 installed (5/s, ETA 269s)
+  1765/3136 installed (5/s, ETA 263s)
+  1791/3136 installed (5/s, ETA 258s)
+  1821/3136 installed (5/s, ETA 252s)
+  1851/3136 installed (5/s, ETA 246s)
+  1881/3136 installed (5/s, ETA 239s)
+  1908/3136 installed (5/s, ETA 235s)
+  1937/3136 installed (5/s, ETA 229s)
+  1963/3136 installed (5/s, ETA 224s)
+  1992/3136 installed (5/s, ETA 218s)
+  2023/3136 installed (5/s, ETA 212s)
+  2055/3136 installed (5/s, ETA 205s)
+  2086/3136 installed (5/s, ETA 199s)
+  2108/3136 installed (5/s, ETA 195s)
+  2138/3136 installed (5/s, ETA 189s)
+  2164/3136 installed (5/s, ETA 184s)
+  2195/3136 installed (5/s, ETA 178s)
+  2226/3136 installed (5/s, ETA 172s)
+  2256/3136 installed (5/s, ETA 166s)
+  2283/3136 installed (5/s, ETA 161s)
+  2312/3136 installed (5/s, ETA 156s)
+  2343/3136 installed (5/s, ETA 150s)
+  2369/3136 installed (5/s, ETA 145s)
+  2400/3136 installed (5/s, ETA 139s)
+  2431/3136 installed (5/s, ETA 133s)
+  2462/3136 installed (5/s, ETA 127s)
+  2485/3136 installed (5/s, ETA 122s)
+  2516/3136 installed (5/s, ETA 116s)
+  2548/3136 installed (5/s, ETA 110s)
+  2575/3136 installed (5/s, ETA 105s)
+  2607/3136 installed (5/s, ETA 99s)
+  2638/3136 installed (5/s, ETA 93s)
+  2667/3136 installed (5/s, ETA 88s)
+  2698/3136 installed (5/s, ETA 82s)
+  2729/3136 installed (5/s, ETA 76s)
+  2756/3136 installed (5/s, ETA 71s)
+  2786/3136 installed (5/s, ETA 65s)
+  2816/3136 installed (5/s, ETA 60s)
+  2846/3136 installed (5/s, ETA 54s)
+  2869/3136 installed (5/s, ETA 50s)
+  2899/3136 installed (5/s, ETA 44s)
+  2930/3136 installed (5/s, ETA 38s)
+  2955/3136 installed (5/s, ETA 34s)
+  2986/3136 installed (5/s, ETA 28s)
+  3018/3136 installed (5/s, ETA 22s)
+  3048/3136 installed (5/s, ETA 16s)
+  3079/3136 installed (5/s, ETA 11s)
+  3111/3136 installed (5/s, ETA 5s)
+  Done: 3136/3136 installed in 580s
+
+Loading wikitext2 eval data...
+  wikitext-2 test: 1,294,336 chars
+  tokenized to 288,730 tokens
+
+Running PPL eval (seq_len=2048)...
+  PPL eval: 140 windows of 2048 tokens (~286,720 tokens total)
+    window 3/140  partial PPL=9.968  ETA 613s
+    window 6/140  partial PPL=8.912  ETA 552s
+    window 9/140  partial PPL=8.972  ETA 510s
+    window 12/140  partial PPL=9.109  ETA 513s
+    window 15/140  partial PPL=9.509  ETA 490s
+    window 18/140  partial PPL=9.699  ETA 472s
+    window 21/140  partial PPL=9.505  ETA 465s
+    window 24/140  partial PPL=9.544  ETA 450s
+    window 27/140  partial PPL=9.776  ETA 434s
+    window 30/140  partial PPL=9.511  ETA 425s
+    window 33/140  partial PPL=9.177  ETA 409s
+    window 36/140  partial PPL=9.057  ETA 397s
+    window 39/140  partial PPL=8.758  ETA 387s
+    window 42/140  partial PPL=8.966  ETA 374s
+    window 45/140  partial PPL=9.186  ETA 361s
+    window 48/140  partial PPL=9.275  ETA 352s
+    window 51/140  partial PPL=9.207  ETA 338s
+    window 54/140  partial PPL=9.068  ETA 326s
+    window 57/140  partial PPL=8.923  ETA 315s
+    window 60/140  partial PPL=9.035  ETA 304s
+    window 63/140  partial PPL=9.038  ETA 291s
+    window 66/140  partial PPL=8.950  ETA 281s
+    window 69/140  partial PPL=8.915  ETA 269s
+    window 72/140  partial PPL=8.962  ETA 257s
+    window 75/140  partial PPL=8.963  ETA 246s
+    window 78/140  partial PPL=8.984  ETA 235s
+    window 81/140  partial PPL=8.924  ETA 223s
+    window 84/140  partial PPL=8.898  ETA 212s
+    window 87/140  partial PPL=8.934  ETA 200s
+    window 90/140  partial PPL=9.066  ETA 189s
+    window 93/140  partial PPL=9.171  ETA 178s
+    window 96/140  partial PPL=9.209  ETA 166s
+    window 99/140  partial PPL=9.147  ETA 155s
+    window 102/140  partial PPL=9.088  ETA 144s
+    window 105/140  partial PPL=9.098  ETA 132s
+    window 108/140  partial PPL=9.071  ETA 121s
+    window 111/140  partial PPL=9.055  ETA 110s
+    window 114/140  partial PPL=9.075  ETA 98s
+    window 117/140  partial PPL=9.084  ETA 87s
+    window 120/140  partial PPL=9.063  ETA 76s
+    window 123/140  partial PPL=9.056  ETA 64s
+    window 126/140  partial PPL=9.052  ETA 53s
+    window 129/140  partial PPL=9.077  ETA 42s
+    window 132/140  partial PPL=9.102  ETA 30s
+    window 135/140  partial PPL=9.064  ETA 19s
+    window 138/140  partial PPL=9.089  ETA 8s
+  PPL = 9.0891 (286,580 tokens, 528s)
+
+Results saved to results/ppl_2bit_noft_wikitext2.json
+
+FINAL PPL: 9.0891
+
+============================================================
+Running: config=2bit_noft, dataset=c4
+============================================================
+============================================================
+PPL eval: config=2bit_noft, dataset=c4
+============================================================
+
+Loading OLMoE in bf16 on GPU...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<00:18,  9.69it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:35,  4.93it/s]Loading weights:   8%|▊         | 15/179 [00:01<00:16,  9.73it/s]Loading weights:  15%|█▍        | 26/179 [00:02<00:15,  9.61it/s]Loading weights:  21%|██        | 37/179 [00:03<00:13, 10.44it/s]Loading weights:  27%|██▋       | 48/179 [00:04<00:12, 10.73it/s]Loading weights:  33%|███▎      | 59/179 [00:05<00:11, 10.70it/s]Loading weights:  36%|███▋      | 65/179 [00:05<00:08, 12.99it/s]Loading weights:  39%|███▉      | 70/179 [00:06<00:11,  9.67it/s]Loading weights:  45%|████▌     | 81/179 [00:09<00:14,  6.92it/s]Loading weights:  51%|█████▏    | 92/179 [00:10<00:11,  7.71it/s]Loading weights:  56%|█████▌    | 100/179 [00:10<00:07, 10.20it/s]Loading weights:  58%|█████▊    | 104/179 [00:14<00:18,  4.01it/s]Loading weights:  60%|██████    | 108/179 [00:14<00:14,  4.74it/s]Loading weights:  64%|██████▎   | 114/179 [00:17<00:17,  3.70it/s]Loading weights:  66%|██████▋   | 119/179 [00:17<00:12,  4.83it/s]Loading weights:  70%|██████▉   | 125/179 [00:19<00:13,  4.07it/s]Loading weights:  71%|███████   | 127/179 [00:19<00:11,  4.41it/s]Loading weights:  73%|███████▎  | 130/179 [00:19<00:09,  4.97it/s]Loading weights:  76%|███████▌  | 136/179 [00:21<00:10,  4.23it/s]Loading weights:  77%|███████▋  | 138/179 [00:22<00:10,  3.82it/s]Loading weights:  79%|███████▉  | 142/179 [00:22<00:07,  4.85it/s]Loading weights:  82%|████████▏ | 147/179 [00:23<00:06,  4.79it/s]Loading weights:  83%|████████▎ | 148/179 [00:25<00:09,  3.31it/s]Loading weights:  85%|████████▌ | 153/179 [00:25<00:05,  4.98it/s]Loading weights:  88%|████████▊ | 158/179 [00:26<00:04,  4.63it/s]Loading weights:  89%|████████▉ | 159/179 [00:27<00:06,  3.22it/s]Loading weights:  94%|█████████▍| 169/179 [00:28<00:01,  5.28it/s]Loading weights:  95%|█████████▍| 170/179 [00:29<00:02,  3.75it/s]Loading weights: 100%|██████████| 179/179 [00:30<00:00,  6.70it/s]Loading weights: 100%|██████████| 179/179 [00:30<00:00,  5.93it/s]
+  loaded in 34s
+
+Installing 2-bit quantized weights...
+Installing 3136 quantized targets from cache/quantized
+  8/3136 installed (2/s, ETA 2044s)
+  26/3136 installed (3/s, ETA 1232s)
+  51/3136 installed (3/s, ETA 935s)
+  79/3136 installed (4/s, ETA 795s)
+  106/3136 installed (4/s, ETA 734s)
+  132/3136 installed (4/s, ETA 701s)
+  161/3136 installed (4/s, ETA 662s)
+  188/3136 installed (4/s, ETA 655s)
+  211/3136 installed (5/s, ETA 649s)
+  242/3136 installed (5/s, ETA 621s)
+  273/3136 installed (5/s, ETA 598s)
+  304/3136 installed (5/s, ETA 579s)
+  334/3136 installed (5/s, ETA 564s)
+  365/3136 installed (5/s, ETA 549s)
+  388/3136 installed (5/s, ETA 549s)
+  411/3136 installed (5/s, ETA 547s)
+  441/3136 installed (5/s, ETA 535s)
+  472/3136 installed (5/s, ETA 523s)
+  503/3136 installed (5/s, ETA 512s)
+  533/3136 installed (5/s, ETA 503s)
+  562/3136 installed (5/s, ETA 499s)
+  590/3136 installed (5/s, ETA 494s)
+  618/3136 installed (5/s, ETA 487s)
+  649/3136 installed (5/s, ETA 478s)
+  680/3136 installed (5/s, ETA 469s)
+  711/3136 installed (5/s, ETA 460s)
+  742/3136 installed (5/s, ETA 452s)
+  765/3136 installed (5/s, ETA 450s)
+  787/3136 installed (5/s, ETA 449s)
+  814/3136 installed (5/s, ETA 444s)
+  845/3136 installed (5/s, ETA 436s)
+  877/3136 installed (5/s, ETA 427s)
+  908/3136 installed (5/s, ETA 419s)
+  931/3136 installed (5/s, ETA 417s)
+  960/3136 installed (5/s, ETA 410s)
+  982/3136 installed (5/s, ETA 408s)
+  1007/3136 installed (5/s, ETA 404s)
+  1038/3136 installed (5/s, ETA 396s)
+  1070/3136 installed (5/s, ETA 389s)
+  1100/3136 installed (5/s, ETA 382s)
+  1123/3136 installed (5/s, ETA 379s)
+  1152/3136 installed (5/s, ETA 373s)
+  1178/3136 installed (5/s, ETA 369s)
+  1203/3136 installed (5/s, ETA 365s)
+  1234/3136 installed (5/s, ETA 358s)
+  1264/3136 installed (5/s, ETA 351s)
+  1291/3136 installed (5/s, ETA 347s)
+  1322/3136 installed (5/s, ETA 341s)
+  1352/3136 installed (5/s, ETA 334s)
+  1375/3136 installed (5/s, ETA 331s)
+  1404/3136 installed (5/s, ETA 325s)
+  1434/3136 installed (5/s, ETA 318s)
+  1464/3136 installed (5/s, ETA 312s)
+  1487/3136 installed (5/s, ETA 309s)
+  1518/3136 installed (5/s, ETA 302s)
+  1549/3136 installed (5/s, ETA 296s)
+  1574/3136 installed (5/s, ETA 292s)
+  1606/3136 installed (5/s, ETA 285s)
+  1637/3136 installed (5/s, ETA 278s)
+  1669/3136 installed (5/s, ETA 273s)
+  1700/3136 installed (5/s, ETA 266s)
+  1732/3136 installed (5/s, ETA 260s)
+  1764/3136 installed (5/s, ETA 253s)
+  1786/3136 installed (5/s, ETA 250s)
+  1818/3136 installed (5/s, ETA 243s)
+  1849/3136 installed (5/s, ETA 237s)
+  1872/3136 installed (5/s, ETA 234s)
+  1903/3136 installed (5/s, ETA 227s)
+  1935/3136 installed (5/s, ETA 221s)
+  1962/3136 installed (5/s, ETA 216s)
+  1991/3136 installed (5/s, ETA 211s)
+  2022/3136 installed (5/s, ETA 205s)
+  2049/3136 installed (5/s, ETA 200s)
+  2079/3136 installed (5/s, ETA 194s)
+  2109/3136 installed (5/s, ETA 189s)
+  2139/3136 installed (5/s, ETA 183s)
+  2160/3136 installed (5/s, ETA 180s)
+  2191/3136 installed (5/s, ETA 174s)
+  2222/3136 installed (5/s, ETA 168s)
+  2244/3136 installed (5/s, ETA 164s)
+  2275/3136 installed (5/s, ETA 158s)
+  2307/3136 installed (5/s, ETA 152s)
+  2338/3136 installed (5/s, ETA 146s)
+  2358/3136 installed (5/s, ETA 143s)
+  2389/3136 installed (5/s, ETA 137s)
+  2419/3136 installed (5/s, ETA 131s)
+  2442/3136 installed (5/s, ETA 127s)
+  2473/3136 installed (5/s, ETA 121s)
+  2503/3136 installed (5/s, ETA 116s)
+  2534/3136 installed (5/s, ETA 110s)
+  2557/3136 installed (5/s, ETA 106s)
+  2588/3136 installed (5/s, ETA 100s)
+  2611/3136 installed (5/s, ETA 96s)
+  2643/3136 installed (5/s, ETA 90s)
+  2674/3136 installed (5/s, ETA 84s)
+  2705/3136 installed (5/s, ETA 79s)
+  2736/3136 installed (5/s, ETA 73s)
+  2759/3136 installed (5/s, ETA 69s)
+  2791/3136 installed (5/s, ETA 63s)
+  2815/3136 installed (5/s, ETA 59s)
+  2847/3136 installed (5/s, ETA 53s)
+  2880/3136 installed (5/s, ETA 47s)
+  2912/3136 installed (5/s, ETA 41s)
+  2941/3136 installed (5/s, ETA 35s)
+  2968/3136 installed (5/s, ETA 31s)
+  2992/3136 installed (5/s, ETA 26s)
+  3023/3136 installed (5/s, ETA 21s)
+  3054/3136 installed (5/s, ETA 15s)
+  3086/3136 installed (6/s, ETA 9s)
+  3118/3136 installed (6/s, ETA 3s)
+  Done: 3136/3136 installed in 569s
+
+Loading c4 eval data...
+  Streaming C4 validation, target ~300,000 tokens
+  collected 305,481 tokens
+
+Running PPL eval (seq_len=2048)...
+  PPL eval: 146 windows of 2048 tokens (~299,008 tokens total)
+    window 2/146  partial PPL=14.122  ETA 760s
+    window 5/146  partial PPL=14.549  ETA 623s
+    window 8/146  partial PPL=12.891  ETA 627s
+    window 11/146  partial PPL=13.488  ETA 583s
+    window 14/146  partial PPL=14.515  ETA 568s
+    window 17/146  partial PPL=13.947  ETA 553s
+    window 20/146  partial PPL=14.053  ETA 530s
+    window 23/146  partial PPL=14.122  ETA 510s
+    window 26/146  partial PPL=14.433  ETA 499s
+    window 29/146  partial PPL=14.242  ETA 480s
+    window 32/146  partial PPL=14.454  ETA 464s
+    window 35/146  partial PPL=14.925  ETA 453s
+    window 38/146  partial PPL=14.899  ETA 437s
+    window 41/146  partial PPL=14.866  ETA 422s
+    window 44/146  partial PPL=14.339  ETA 411s
+    window 47/146  partial PPL=14.303  ETA 396s
+    window 50/146  partial PPL=14.554  ETA 381s
+    window 53/146  partial PPL=14.325  ETA 369s
+    window 56/146  partial PPL=14.379  ETA 356s
+    window 59/146  partial PPL=14.359  ETA 342s
+    window 62/146  partial PPL=14.217  ETA 331s
+    window 65/146  partial PPL=14.237  ETA 318s
+    window 68/146  partial PPL=14.406  ETA 305s
+    window 71/146  partial PPL=14.353  ETA 294s
+    window 74/146  partial PPL=14.359  ETA 281s
+    window 77/146  partial PPL=14.542  ETA 268s
+    window 80/146  partial PPL=14.513  ETA 257s
+    window 83/146  partial PPL=14.643  ETA 245s
+    window 86/146  partial PPL=14.961  ETA 232s
+    window 89/146  partial PPL=14.988  ETA 221s
+    window 92/146  partial PPL=14.832  ETA 209s
+    window 95/146  partial PPL=14.833  ETA 197s
+    window 98/146  partial PPL=14.903  ETA 186s
+    window 101/146  partial PPL=14.891  ETA 174s
+    window 104/146  partial PPL=14.927  ETA 162s
+    window 107/146  partial PPL=14.878  ETA 150s
+    window 110/146  partial PPL=14.956  ETA 139s
+    window 113/146  partial PPL=14.798  ETA 127s
+    window 116/146  partial PPL=14.859  ETA 115s
+    window 119/146  partial PPL=14.796  ETA 104s
+    window 122/146  partial PPL=14.771  ETA 92s
+    window 125/146  partial PPL=14.848  ETA 81s
+    window 128/146  partial PPL=14.426  ETA 69s
+    window 131/146  partial PPL=14.165  ETA 57s
+    window 134/146  partial PPL=14.170  ETA 46s
+    window 137/146  partial PPL=14.176  ETA 34s
+    window 140/146  partial PPL=14.216  ETA 23s
+    window 143/146  partial PPL=14.208  ETA 11s
+    window 146/146  partial PPL=14.161  ETA 0s
+  PPL = 14.1606 (298,862 tokens, 558s)
+
+Results saved to results/ppl_2bit_noft_c4.json
+
+FINAL PPL: 14.1606
+
+============================================================
+RESULTS TABLE
+============================================================
+config            wikitext2           c4
+------------------------------------------------------------
+fp16                 6.6518      12.2433
+2bit_noft            9.0891      14.1606
+delta (q-fp16)      +2.4373      +1.9173
+
+------------------------------------------------------------
+  [PASS] fp16 wt2 in [6, 12]
+  [PASS] fp16 c4 in [10, 25]
+  [PASS] 2bit_noft wt2 < 3x fp16 and < 30
+  [PASS] 2bit_noft c4 < 3x fp16 and < 60
+
+Table saved to results/a85_ppl_table.json
+
+A.8.5 GATE: PASS — no-finetune baseline established.
+Ready for A.9 (blockwise fine-tuning).

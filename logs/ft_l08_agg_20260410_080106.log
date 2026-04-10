@@ -1,0 +1,43 @@
+Loading model...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<02:14,  1.32it/s]Loading weights:   2%|▏         | 4/179 [00:02<01:31,  1.92it/s]Loading weights:   3%|▎         | 5/179 [00:02<01:20,  2.17it/s]Loading weights:   8%|▊         | 15/179 [00:05<01:00,  2.73it/s]Loading weights:   9%|▉         | 16/179 [00:06<00:58,  2.80it/s]Loading weights:  15%|█▍        | 26/179 [00:07<00:34,  4.47it/s]Loading weights:  15%|█▌        | 27/179 [00:07<00:35,  4.30it/s]Loading weights:  21%|██        | 37/179 [00:09<00:27,  5.25it/s]Loading weights:  21%|██        | 38/179 [00:09<00:30,  4.61it/s]Loading weights:  27%|██▋       | 48/179 [00:13<00:36,  3.58it/s]Loading weights:  27%|██▋       | 49/179 [00:14<00:44,  2.93it/s]Loading weights:  33%|███▎      | 59/179 [00:20<00:56,  2.14it/s]Loading weights:  34%|███▎      | 60/179 [00:32<02:22,  1.20s/it]Loading weights:  39%|███▉      | 70/179 [00:34<01:18,  1.40it/s]Loading weights:  40%|███▉      | 71/179 [01:01<04:22,  2.43s/it]Loading weights:  45%|████▌     | 81/179 [01:07<02:29,  1.53s/it]Loading weights:  46%|████▌     | 82/179 [01:31<04:51,  3.01s/it]Loading weights:  47%|████▋     | 84/179 [01:31<04:02,  2.55s/it]Loading weights:  51%|█████▏    | 92/179 [01:36<02:22,  1.64s/it]Loading weights:  52%|█████▏    | 93/179 [01:57<04:25,  3.09s/it]Loading weights:  58%|█████▊    | 103/179 [01:58<01:55,  1.52s/it]Loading weights:  58%|█████▊    | 104/179 [02:07<02:34,  2.05s/it]Loading weights:  60%|█████▉    | 107/179 [02:07<01:57,  1.64s/it]Loading weights:  64%|██████▎   | 114/179 [02:08<01:02,  1.04it/s]Loading weights:  64%|██████▍   | 115/179 [02:13<01:23,  1.30s/it]Loading weights:  70%|██████▉   | 125/179 [02:13<00:32,  1.65it/s]Loading weights:  72%|███████▏  | 128/179 [02:16<00:35,  1.45it/s]Loading weights:  75%|███████▍  | 134/179 [02:17<00:20,  2.17it/s]Loading weights:  77%|███████▋  | 137/179 [02:30<00:54,  1.29s/it]Loading weights:  82%|████████▏ | 147/179 [02:40<00:36,  1.15s/it]Loading weights:  83%|████████▎ | 149/179 [02:45<00:38,  1.28s/it]Loading weights:  85%|████████▍ | 152/179 [02:46<00:29,  1.10s/it]Loading weights:  85%|████████▌ | 153/179 [02:46<00:26,  1.02s/it]Loading weights:  88%|████████▊ | 158/179 [02:55<00:26,  1.27s/it]Loading weights:  89%|████████▉ | 159/179 [03:05<00:42,  2.14s/it]Loading weights:  94%|█████████▍| 169/179 [03:13<00:13,  1.38s/it]Loading weights:  95%|█████████▍| 170/179 [03:20<00:15,  1.78s/it]Loading weights: 100%|██████████| 179/179 [03:20<00:00,  1.12s/it]
+  loaded in 203s
+
+Collecting activations for layer 8...
+    all experts saturated at shard 8/256
+    collected in 10.0s — counts: min=1024 max=1024 mean=1024
+
+Fine-tuning 64 experts (lr=0.002, n_steps=300)...
+  expert  0: 2.7%  elapsed 13s
+  expert  8: 2.0%  elapsed 95s
+  expert 16: 1.5%  elapsed 175s
+  expert 24: 2.9%  elapsed 261s
+  expert 32: 3.2%  elapsed 344s
+  expert 40: 2.3%  elapsed 429s
+  expert 48: 4.2%  elapsed 511s
+  expert 56: 2.7%  elapsed 598s
+  expert 63: 1.9%  elapsed 672s
+
+Fine-tuning 4 attention projections (H-weighted, lr=0.0005)...
+  q_proj: 1.078e-08 -> 1.078e-08  (0.0%)
+  k_proj: 1.040e-08 -> 1.040e-08  (0.0%)
+  v_proj: 1.632e-08 -> 1.631e-08  (0.0%)
+  o_proj: 7.873e-10 -> 7.872e-10  (0.0%)
+
+============================================================
+L08 AGGREGATE STATS
+============================================================
+
+Experts (n=64):
+  per-expert improvement: min=1.5%  max=7.2%  mean=3.0%
+  TOKEN-WEIGHTED aggregate: 2.97%  (2.4476e+01 -> 2.3750e+01)
+
+Attention (n=4):
+  per-proj improvement: ['0.0%', '0.0%', '0.0%', '0.0%']
+  AGGREGATE: 0.01%  (3.8283e-08 -> 3.8279e-08)
+
+Saved 196 tuned LUTs to cache/quantized_ft/L08/luts.pt
+
+============================================================
+VERDICT
+============================================================
+[STRUCTURAL] expert FT only reduces MSE by 3.0% — pivot to no-FT story

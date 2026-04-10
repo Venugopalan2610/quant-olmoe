@@ -1,0 +1,14 @@
+cache/
+results/
+plots/
+*.pyc
+__pycache__/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.pt
+*.bin
+*.safetensors
+*.gguf
+fast-hadamard-transform/
+external/qtip/

@@ -1,0 +1,203 @@
+nohup: ignoring input
+A.11 routing ablation: per-layer mean H quantization
+Output dir: cache/quantized_per_layer_H
+Layers: [0, 16)
+Damping: 0.01
+
+=== Layer 0 ===
+/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/torch/utils/cpp_extension.py:1965: UserWarning: TORCH_CUDA_ARCH_LIST is not set, all archs for visible cards are included for compilation. 
+If this is not desired, please set os.environ['TORCH_CUDA_ARCH_LIST'].
+  warnings.warn(
+  L00 attn_q_proj: proxy=2.0151e-07 time=53.9s
+  L00 attn_k_proj: proxy=1.8225e-07 time=9.3s
+  L00 attn_v_proj: proxy=5.0202e-07 time=7.1s
+  L00 attn_o_proj: proxy=2.4201e-08 time=7.5s
+  L00 progress: 16/64 experts, 264s elapsed
+  L00 progress: 32/64 experts, 451s elapsed
+  L00 progress: 48/64 experts, 639s elapsed
+  L00 progress: 64/64 experts, 829s elapsed
+  L00 done: 196 targets in 829s (4.2s/target avg)
+  layer aggregate expert proxy loss: 1.3144e-01
+
+=== Layer 1 ===
+  L01 attn_q_proj: proxy=9.1245e-07 time=8.1s
+  L01 attn_k_proj: proxy=8.8379e-07 time=8.1s
+  L01 attn_v_proj: proxy=1.7644e-06 time=9.9s
+  L01 attn_o_proj: proxy=7.5346e-08 time=7.3s
+  L01 progress: 16/64 experts, 221s elapsed
+  L01 progress: 32/64 experts, 412s elapsed
+  L01 progress: 48/64 experts, 600s elapsed
+  L01 progress: 64/64 experts, 793s elapsed
+  L01 done: 196 targets in 793s (4.0s/target avg)
+  layer aggregate expert proxy loss: 2.4388e-01
+
+=== Layer 2 ===
+  L02 attn_q_proj: proxy=2.6186e-06 time=9.2s
+  L02 attn_k_proj: proxy=2.4947e-06 time=9.1s
+  L02 attn_v_proj: proxy=3.9748e-06 time=10.2s
+  L02 attn_o_proj: proxy=1.2641e-07 time=8.7s
+  L02 progress: 16/64 experts, 226s elapsed
+  L02 progress: 32/64 experts, 418s elapsed
+  L02 progress: 48/64 experts, 606s elapsed
+  L02 progress: 64/64 experts, 800s elapsed
+  L02 done: 196 targets in 800s (4.1s/target avg)
+  layer aggregate expert proxy loss: 3.5595e-01
+
+=== Layer 3 ===
+  L03 attn_q_proj: proxy=3.3919e-06 time=8.1s
+  L03 attn_k_proj: proxy=3.3587e-06 time=8.2s
+  L03 attn_v_proj: proxy=5.0590e-06 time=10.5s
+  L03 attn_o_proj: proxy=1.2730e-07 time=7.8s
+  L03 progress: 16/64 experts, 233s elapsed
+  L03 progress: 32/64 experts, 429s elapsed
+  L03 progress: 48/64 experts, 623s elapsed
+  L03 progress: 64/64 experts, 810s elapsed
+  L03 done: 196 targets in 810s (4.1s/target avg)
+  layer aggregate expert proxy loss: 4.4658e-01
+
+=== Layer 4 ===
+  L04 attn_q_proj: proxy=5.6235e-06 time=8.2s
+  L04 attn_k_proj: proxy=5.2132e-06 time=11.7s
+  L04 attn_v_proj: proxy=8.4582e-06 time=7.5s
+  L04 attn_o_proj: proxy=3.3205e-07 time=7.4s
+  L04 progress: 16/64 experts, 226s elapsed
+  L04 progress: 32/64 experts, 415s elapsed
+  L04 progress: 48/64 experts, 605s elapsed
+  L04 progress: 64/64 experts, 794s elapsed
+  L04 done: 196 targets in 794s (4.0s/target avg)
+  layer aggregate expert proxy loss: 6.3300e-01
+
+=== Layer 5 ===
+  L05 attn_q_proj: proxy=7.2650e-06 time=8.0s
+  L05 attn_k_proj: proxy=7.1522e-06 time=11.1s
+  L05 attn_v_proj: proxy=1.0482e-05 time=7.6s
+  L05 attn_o_proj: proxy=4.6376e-07 time=8.1s
+  L05 progress: 16/64 experts, 227s elapsed
+  L05 progress: 32/64 experts, 416s elapsed
+  L05 progress: 48/64 experts, 606s elapsed
+  L05 progress: 64/64 experts, 797s elapsed
+  L05 done: 196 targets in 797s (4.1s/target avg)
+  layer aggregate expert proxy loss: 7.9050e-01
+
+=== Layer 6 ===
+  L06 attn_q_proj: proxy=9.0470e-06 time=9.0s
+  L06 attn_k_proj: proxy=8.7411e-06 time=11.0s
+  L06 attn_v_proj: proxy=1.4326e-05 time=8.1s
+  L06 attn_o_proj: proxy=6.6923e-07 time=8.3s
+  L06 progress: 16/64 experts, 235s elapsed
+  L06 progress: 32/64 experts, 429s elapsed
+  L06 progress: 48/64 experts, 618s elapsed
+  L06 progress: 64/64 experts, 811s elapsed
+  L06 done: 196 targets in 811s (4.1s/target avg)
+  layer aggregate expert proxy loss: 9.1612e-01
+
+=== Layer 7 ===
+  L07 attn_q_proj: proxy=1.1570e-05 time=8.4s
+  L07 attn_k_proj: proxy=1.0940e-05 time=8.2s
+  L07 attn_v_proj: proxy=1.8504e-05 time=10.8s
+  L07 attn_o_proj: proxy=1.0279e-06 time=8.7s
+  L07 progress: 16/64 experts, 230s elapsed
+  L07 progress: 32/64 experts, 421s elapsed
+  L07 progress: 48/64 experts, 609s elapsed
+  L07 progress: 64/64 experts, 799s elapsed
+  L07 done: 196 targets in 799s (4.1s/target avg)
+  layer aggregate expert proxy loss: 9.5848e-01
+
+=== Layer 8 ===
+  L08 attn_q_proj: proxy=2.1623e-05 time=7.7s
+  L08 attn_k_proj: proxy=2.0871e-05 time=7.9s
+  L08 attn_v_proj: proxy=3.2685e-05 time=10.4s
+  L08 attn_o_proj: proxy=1.5472e-06 time=8.1s
+  L08 progress: 16/64 experts, 219s elapsed
+  L08 progress: 32/64 experts, 402s elapsed
+  L08 progress: 48/64 experts, 589s elapsed
+  L08 progress: 64/64 experts, 773s elapsed
+  L08 done: 196 targets in 773s (3.9s/target avg)
+  layer aggregate expert proxy loss: 1.0508e+00
+
+=== Layer 9 ===
+  L09 attn_q_proj: proxy=3.6581e-05 time=7.6s
+  L09 attn_k_proj: proxy=3.3795e-05 time=7.9s
+  L09 attn_v_proj: proxy=5.6973e-05 time=10.7s
+  L09 attn_o_proj: proxy=2.4114e-06 time=7.7s
+  L09 progress: 16/64 experts, 221s elapsed
+  L09 progress: 32/64 experts, 410s elapsed
+  L09 progress: 48/64 experts, 597s elapsed
+  L09 progress: 64/64 experts, 785s elapsed
+  L09 done: 196 targets in 785s (4.0s/target avg)
+  layer aggregate expert proxy loss: 1.2572e+00
+
+=== Layer 10 ===
+  L10 attn_q_proj: proxy=5.3841e-05 time=10.8s
+  L10 attn_k_proj: proxy=5.1607e-05 time=7.8s
+  L10 attn_v_proj: proxy=8.9845e-05 time=7.6s
+  L10 attn_o_proj: proxy=5.3035e-06 time=8.1s
+  L10 progress: 16/64 experts, 222s elapsed
+  L10 progress: 32/64 experts, 409s elapsed
+  L10 progress: 48/64 experts, 594s elapsed
+  L10 progress: 64/64 experts, 783s elapsed
+  L10 done: 196 targets in 783s (4.0s/target avg)
+  layer aggregate expert proxy loss: 1.5169e+00
+
+=== Layer 11 ===
+  L11 attn_q_proj: proxy=7.8425e-05 time=8.0s
+  L11 attn_k_proj: proxy=7.2585e-05 time=7.9s
+  L11 attn_v_proj: proxy=1.3027e-04 time=8.0s
+  L11 attn_o_proj: proxy=8.7081e-06 time=11.5s
+  L11 progress: 16/64 experts, 221s elapsed
+  L11 progress: 32/64 experts, 405s elapsed
+  L11 progress: 48/64 experts, 592s elapsed
+  L11 progress: 64/64 experts, 777s elapsed
+  L11 done: 196 targets in 777s (4.0s/target avg)
+  layer aggregate expert proxy loss: 2.0133e+00
+
+=== Layer 12 ===
+  L12 attn_q_proj: proxy=1.2904e-04 time=8.8s
+  L12 attn_k_proj: proxy=1.1584e-04 time=8.3s
+  L12 attn_v_proj: proxy=2.3454e-04 time=10.7s
+  L12 attn_o_proj: proxy=1.2698e-05 time=8.0s
+  L12 progress: 16/64 experts, 220s elapsed
+  L12 progress: 32/64 experts, 408s elapsed
+  L12 progress: 48/64 experts, 601s elapsed
+  L12 progress: 64/64 experts, 799s elapsed
+  L12 done: 196 targets in 799s (4.1s/target avg)
+  layer aggregate expert proxy loss: 2.4522e+00
+
+=== Layer 13 ===
+  L13 attn_q_proj: proxy=2.6481e-04 time=7.5s
+  L13 attn_k_proj: proxy=2.2858e-04 time=8.2s
+  L13 attn_v_proj: proxy=5.5323e-04 time=7.8s
+  L13 attn_o_proj: proxy=2.0933e-05 time=8.5s
+  L13 progress: 16/64 experts, 227s elapsed
+  L13 progress: 32/64 experts, 422s elapsed
+  L13 progress: 48/64 experts, 617s elapsed
+  L13 progress: 64/64 experts, 815s elapsed
+  L13 done: 196 targets in 815s (4.2s/target avg)
+  layer aggregate expert proxy loss: 2.9837e+00
+
+=== Layer 14 ===
+  L14 attn_q_proj: proxy=2.5513e-04 time=11.4s
+  L14 attn_k_proj: proxy=2.1783e-04 time=9.4s
+  L14 attn_v_proj: proxy=6.6319e-04 time=9.3s
+  L14 attn_o_proj: proxy=2.3484e-05 time=10.4s
+  L14 progress: 16/64 experts, 238s elapsed
+  L14 progress: 32/64 experts, 439s elapsed
+  L14 progress: 48/64 experts, 639s elapsed
+  L14 progress: 64/64 experts, 838s elapsed
+  L14 done: 196 targets in 838s (4.3s/target avg)
+  layer aggregate expert proxy loss: 3.5225e+00
+
+=== Layer 15 ===
+  L15 attn_q_proj: proxy=3.5143e-04 time=8.5s
+  L15 attn_k_proj: proxy=3.1101e-04 time=13.0s
+  L15 attn_v_proj: proxy=9.0429e-04 time=8.8s
+  L15 attn_o_proj: proxy=5.9268e-05 time=7.9s
+  L15 progress: 16/64 experts, 232s elapsed
+  L15 progress: 32/64 experts, 421s elapsed
+  L15 progress: 48/64 experts, 614s elapsed
+  L15 progress: 64/64 experts, 804s elapsed
+  L15 done: 196 targets in 804s (4.1s/target avg)
+  layer aggregate expert proxy loss: 3.6490e+00
+
+=== A.11 quantization done ===
+Total wall clock: 213.4 min

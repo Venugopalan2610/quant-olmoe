@@ -1,0 +1,51 @@
+Device: cuda
+Loading tokens...
+  tokens shape: (2048, 1024), dtype: int32
+Loading full model (bf16 CPU)...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   2%|▏         | 4/179 [00:01<01:14,  2.35it/s]Loading weights:   3%|▎         | 5/179 [00:02<01:49,  1.58it/s]Loading weights:   8%|▊         | 15/179 [00:03<00:23,  6.89it/s]Loading weights:  10%|█         | 18/179 [00:03<00:25,  6.21it/s]Loading weights:  15%|█▍        | 26/179 [00:03<00:15, 10.04it/s]Loading weights:  16%|█▌        | 29/179 [00:04<00:18,  8.04it/s]Loading weights:  21%|██        | 37/179 [00:04<00:10, 13.12it/s]Loading weights:  23%|██▎       | 41/179 [00:05<00:16,  8.41it/s]Loading weights:  27%|██▋       | 48/179 [00:09<00:35,  3.71it/s]Loading weights:  28%|██▊       | 50/179 [00:21<02:12,  1.03s/it]Loading weights:  33%|███▎      | 59/179 [00:23<01:22,  1.46it/s]Loading weights:  34%|███▍      | 61/179 [00:29<01:55,  1.02it/s]Loading weights:  39%|███▉      | 70/179 [00:31<01:06,  1.63it/s]Loading weights:  40%|███▉      | 71/179 [00:38<01:55,  1.07s/it]Loading weights:  45%|████▌     | 81/179 [00:40<01:00,  1.63it/s]Loading weights:  46%|████▌     | 82/179 [00:49<01:55,  1.19s/it]Loading weights:  51%|█████▏    | 92/179 [01:02<01:46,  1.23s/it]Loading weights:  52%|█████▏    | 93/179 [01:15<02:50,  1.98s/it]Loading weights:  58%|█████▊    | 103/179 [01:20<01:36,  1.26s/it]Loading weights:  58%|█████▊    | 104/179 [01:39<03:01,  2.41s/it]Loading weights:  64%|██████▎   | 114/179 [01:42<01:32,  1.43s/it]Loading weights:  64%|██████▍   | 115/179 [01:47<01:43,  1.61s/it]Loading weights:  70%|██████▉   | 125/179 [01:47<00:46,  1.17it/s]Loading weights:  71%|███████   | 127/179 [01:50<00:47,  1.09it/s]Loading weights:  76%|███████▌  | 136/179 [01:50<00:22,  1.88it/s]Loading weights:  77%|███████▋  | 138/179 [01:54<00:28,  1.46it/s]Loading weights:  82%|████████▏ | 147/179 [01:54<00:13,  2.45it/s]Loading weights:  83%|████████▎ | 149/179 [01:59<00:18,  1.58it/s]Loading weights:  88%|████████▊ | 158/179 [01:59<00:07,  2.66it/s]Loading weights:  89%|████████▉ | 160/179 [02:01<00:09,  2.10it/s]Loading weights:  94%|█████████▍| 169/179 [02:02<00:02,  3.55it/s]Loading weights:  96%|█████████▌| 171/179 [02:05<00:03,  2.22it/s]Loading weights: 100%|██████████| 179/179 [02:05<00:00,  1.43it/s]
+  loaded in 129.6s
+  2048 seqs × 1024 tokens = 256 shards of B=8
+
+Embedding 256 shards...
+  embedded in 89.7s
+
+=== Replay layer 0 ===
+  layer 0 replayed in 104.1s
+
+=== Replay layer 1 ===
+  layer 1 replayed in 126.5s
+
+=== Replay layer 2 ===
+  layer 2 replayed in 136.2s
+
+=== Replay layer 3 ===
+  layer 3 replayed in 144.4s
+
+=== Replay layer 4 ===
+  layer 4 replayed in 148.3s
+
+=== Replay layer 5 ===
+  layer 5 replayed in 135.8s
+
+=== Replay layer 6 ===
+  layer 6 replayed in 90.5s
+
+=== Replay layer 7 ===
+  layer 7 replayed in 90.7s
+
+=== Replay layer 8 ===
+  layer 8 replayed in 86.6s
+
+=== Replay layer 9 ===
+  layer 9 replayed in 89.0s
+
+=== Replay layer 10 ===
+  layer 10 replayed in 226.2s
+
+=== Replay layer 11 ===
+  layer 11 replayed in 612.3s
+
+=== Replay layer 12 ===
+  layer 12 replayed in 521.6s
+
+=== Replay layer 13 ===

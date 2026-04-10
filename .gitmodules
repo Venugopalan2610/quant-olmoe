@@ -1,0 +1,3 @@
+[submodule "external/qtip"]
+	path = external/qtip
+	url = https://github.com/Cornell-RelaxML/qtip.git
