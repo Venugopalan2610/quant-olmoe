@@ -1,0 +1,36 @@
+Loading model...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<00:25,  6.88it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:24,  7.22it/s]Loading weights:   8%|▊         | 15/179 [00:01<00:10, 15.99it/s]Loading weights:  15%|█▍        | 26/179 [00:01<00:10, 15.00it/s]Loading weights:  21%|██        | 37/179 [00:02<00:10, 13.03it/s]Loading weights:  27%|██▋       | 48/179 [00:03<00:10, 11.94it/s]Loading weights:  32%|███▏      | 57/179 [00:04<00:10, 11.76it/s]Loading weights:  33%|███▎      | 59/179 [00:05<00:11, 10.35it/s]Loading weights:  39%|███▉      | 70/179 [00:09<00:22,  4.83it/s]Loading weights:  42%|████▏     | 76/179 [00:09<00:16,  6.22it/s]Loading weights:  45%|████▍     | 80/179 [00:09<00:13,  7.39it/s]Loading weights:  46%|████▋     | 83/179 [00:10<00:17,  5.62it/s]Loading weights:  51%|█████▏    | 92/179 [00:12<00:15,  5.59it/s]Loading weights:  58%|█████▊    | 103/179 [00:13<00:12,  6.01it/s]Loading weights:  60%|██████    | 108/179 [00:13<00:09,  7.38it/s]Loading weights:  64%|██████▎   | 114/179 [00:15<00:12,  5.16it/s]Loading weights:  66%|██████▋   | 119/179 [00:16<00:09,  6.59it/s]Loading weights:  70%|██████▉   | 125/179 [00:17<00:10,  5.34it/s]Loading weights:  71%|███████   | 127/179 [00:17<00:09,  5.47it/s]Loading weights:  76%|███████▌  | 136/179 [00:19<00:07,  5.78it/s]Loading weights:  77%|███████▋  | 138/179 [00:20<00:07,  5.20it/s]Loading weights:  82%|████████▏ | 147/179 [00:21<00:05,  6.19it/s]Loading weights:  83%|████████▎ | 148/179 [00:21<00:04,  6.21it/s]Loading weights:  85%|████████▍ | 152/179 [00:22<00:04,  5.93it/s]Loading weights:  88%|████████▊ | 158/179 [00:23<00:03,  5.99it/s]Loading weights:  89%|████████▉ | 159/179 [00:23<00:03,  5.52it/s]Loading weights:  94%|█████████▍| 168/179 [00:24<00:01,  6.11it/s]Loading weights:  94%|█████████▍| 169/179 [00:26<00:03,  3.17it/s]Loading weights:  95%|█████████▍| 170/179 [00:27<00:02,  3.31it/s]Loading weights: 100%|██████████| 179/179 [00:27<00:00,  6.60it/s]
+Model loaded.
+Enumerated 3136 targets
+[0] L00.attn.q_proj: OK
+[100] L00.E32.gate_proj: OK
+[200] L01.E00.gate_proj: OK
+[300] L01.E33.up_proj: OK
+[400] L02.E01.up_proj: OK
+[500] L02.E34.down_proj: OK
+[600] L03.E02.down_proj: OK
+[700] L03.E36.gate_proj: OK
+[800] L04.E04.gate_proj: OK
+[900] L04.E37.up_proj: OK
+[1000] L05.E05.up_proj: OK
+[1100] L05.E38.down_proj: OK
+[1200] L06.E06.down_proj: OK
+[1300] L06.E40.gate_proj: OK
+[1400] L07.E08.gate_proj: OK
+[1500] L07.E41.up_proj: OK
+[1600] L08.E09.up_proj: OK
+[1700] L08.E42.down_proj: OK
+[1800] L09.E10.down_proj: OK
+[1900] L09.E44.gate_proj: OK
+[2000] L10.E12.gate_proj: OK
+[2100] L10.E45.up_proj: OK
+[2200] L11.E13.up_proj: OK
+[2300] L11.E46.down_proj: OK
+[2400] L12.E14.down_proj: OK
+[2500] L12.E48.gate_proj: OK
+[2600] L13.E16.gate_proj: OK
+[2700] L13.E49.up_proj: OK
+[2800] L14.E17.up_proj: OK
+[2900] L14.E50.down_proj: OK
+[3000] L15.E18.down_proj: OK
+[3100] L15.E52.gate_proj: OK

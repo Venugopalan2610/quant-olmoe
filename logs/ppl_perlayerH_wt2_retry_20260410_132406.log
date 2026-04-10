@@ -1,0 +1,27 @@
+nohup: ignoring input
+============================================================
+PPL eval: config=2bit_noft, dataset=wikitext2
+============================================================
+
+Loading OLMoE in bf16 on GPU...
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:05<00:29,  5.82s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:12<00:25,  6.28s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:19<00:20,  6.80s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:34<00:19,  9.76s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:48<00:11, 11.51s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:01<00:00, 11.92s/it]Loading checkpoint shards: 100%|██████████| 6/6 [01:01<00:00, 10.25s/it]
+  loaded in 63s
+
+Installing 2-bit quantized weights from cache/quantized_per_layer_H...
+Installing 3136 quantized targets from cache/quantized_per_layer_H
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/hungryeagle/qtip-olmoe/src/eval/run_ppl.py", line 121, in <module>
+    main()
+  File "/home/hungryeagle/qtip-olmoe/src/eval/run_ppl.py", line 67, in main
+    install_stats = install_quantized_weights(model, quant_dir=args.quant_dir, verbose=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/src/eval/install_quantized.py", line 78, in install_quantized_weights
+    target.set_weight(Wh_torch)
+  File "/home/hungryeagle/qtip-olmoe/src/models/olmoe_adapter.py", line 105, in set_
+    experts.gate_up_proj[expert_idx, offset:offset + I, :].copy_(
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1729, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'ModuleList' object has no attribute 'gate_up_proj'
