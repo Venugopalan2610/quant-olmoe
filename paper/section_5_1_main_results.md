@@ -11,7 +11,7 @@ We report perplexity on WikiText-2 and C4 for OLMoE-1B-7B-0125 in three configur
 | fp16 baseline | 6.65 | 12.24 | 1.000x | 1.000x |
 | 2-bit, per-expert H (ours) | **9.09** | **14.16** | **1.367x** | **1.157x** |
 | 2-bit, per-layer H (unweighted mean) | 9.21 | 14.43 | 1.385x | 1.179x |
-| 2-bit, per-layer H (token-weighted mean) | TBD | TBD | TBD | TBD |
+| 2-bit, per-layer H (token-weighted mean) | 9.18 | 14.44 | 1.381x | 1.180x |
 
 The per-expert configuration achieves WikiText-2 perplexity 9.09 against an fp16 baseline of 6.65 — a 1.367x ratio at one-eighth the original bitrate. On C4, the fp16 ratio is tighter at 1.157x. Both ratios are substantially closer to 1.0 than would be expected for a naive 2-bit quantization of a dense LLM of comparable active-parameter count, and (as we argue in Section 5.4) reflect the good match between OLMoE's post-RHT expert weight distribution and the trellis codebook.
 
