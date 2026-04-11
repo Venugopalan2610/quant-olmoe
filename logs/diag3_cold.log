@@ -1,0 +1,9 @@
+Loading model COLD...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:33,  5.19it/s]Loading weights:   8%|▊         | 15/179 [00:03<00:44,  3.69it/s]Loading weights:  15%|█▍        | 26/179 [00:04<00:25,  6.09it/s]Loading weights:  21%|██        | 37/179 [00:05<00:17,  8.30it/s]Loading weights:  27%|██▋       | 48/179 [00:06<00:13, 10.06it/s]Loading weights:  33%|███▎      | 59/179 [00:06<00:10, 11.51it/s]Loading weights:  39%|███▉      | 70/179 [00:07<00:08, 12.36it/s]Loading weights:  45%|████▌     | 81/179 [00:08<00:07, 13.09it/s]Loading weights:  51%|█████▏    | 92/179 [00:09<00:06, 13.68it/s]Loading weights:  58%|█████▊    | 103/179 [00:09<00:05, 14.18it/s]Loading weights:  64%|██████▎   | 114/179 [00:11<00:05, 12.05it/s]Loading weights:  70%|██████▉   | 125/179 [00:13<00:06,  8.81it/s]Loading weights:  71%|███████   | 127/179 [00:13<00:05,  8.68it/s]Loading weights:  76%|███████▌  | 136/179 [00:17<00:09,  4.64it/s]Loading weights:  77%|███████▋  | 137/179 [00:19<00:13,  3.20it/s]Loading weights:  82%|████████▏ | 147/179 [00:22<00:09,  3.25it/s]Loading weights:  83%|████████▎ | 148/179 [00:24<00:12,  2.54it/s]Loading weights:  88%|████████▊ | 158/179 [00:27<00:07,  2.77it/s]Loading weights:  89%|████████▉ | 159/179 [00:29<00:08,  2.22it/s]Loading weights:  94%|█████████▍| 169/179 [00:32<00:04,  2.46it/s]Loading weights:  95%|█████████▍| 170/179 [00:35<00:04,  1.87it/s]Loading weights: 100%|██████████| 179/179 [00:35<00:00,  3.25it/s]Loading weights: 100%|██████████| 179/179 [00:35<00:00,  5.04it/s]
+experts type: OlmoeExperts
+isinstance ModuleList: False
+has gate_up_proj: True
+
+children of experts:
+  act_fn: SiLUActivation
+iteration failed: object of type 'OlmoeExperts' has no len()

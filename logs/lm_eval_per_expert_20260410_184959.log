@@ -1,0 +1,225 @@
+============================================================
+lm-eval run: config=per_expert
+  tasks: ['wikitext', 'hellaswag', 'arc_challenge', 'arc_easy', 'piqa']
+  num_fewshot: 0
+  batch_size: auto:4
+============================================================
+
+[1/4] Loading OLMoE in bf16 on GPU...
+Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:04<00:21,  4.26s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:12<00:26,  6.50s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:19<00:19,  6.67s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:25<00:13,  6.57s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:33<00:07,  7.15s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:40<00:00,  6.85s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:40<00:00,  6.68s/it]
+  loaded in 41s
+
+[2/4] Installing 2-bit quantized weights from cache/quantized...
+Installing 3136 quantized targets from cache/quantized
+  15/3136 installed (2/s, ETA 1453s)
+  44/3136 installed (4/s, ETA 847s)
+  73/3136 installed (4/s, ETA 721s)
+  103/3136 installed (5/s, ETA 654s)
+  132/3136 installed (5/s, ETA 619s)
+  164/3136 installed (5/s, ETA 585s)
+  197/3136 installed (5/s, ETA 561s)
+  208/3136 installed (5/s, ETA 601s)
+  241/3136 installed (5/s, ETA 573s)
+  274/3136 installed (5/s, ETA 552s)
+  307/3136 installed (5/s, ETA 533s)
+  340/3136 installed (5/s, ETA 517s)
+  374/3136 installed (6/s, ETA 501s)
+  402/3136 installed (6/s, ETA 496s)
+  417/3136 installed (5/s, ETA 509s)
+  450/3136 installed (5/s, ETA 496s)
+  480/3136 installed (5/s, ETA 488s)
+  514/3136 installed (6/s, ETA 476s)
+  547/3136 installed (6/s, ETA 465s)
+  580/3136 installed (6/s, ETA 455s)
+  608/3136 installed (6/s, ETA 450s)
+  623/3136 installed (5/s, ETA 457s)
+  655/3136 installed (6/s, ETA 449s)
+  687/3136 installed (6/s, ETA 440s)
+  720/3136 installed (6/s, ETA 431s)
+  753/3136 installed (6/s, ETA 423s)
+  785/3136 installed (6/s, ETA 416s)
+  811/3136 installed (6/s, ETA 413s)
+  826/3136 installed (6/s, ETA 417s)
+  855/3136 installed (6/s, ETA 412s)
+  886/3136 installed (6/s, ETA 405s)
+  918/3136 installed (6/s, ETA 397s)
+  949/3136 installed (6/s, ETA 391s)
+  979/3136 installed (6/s, ETA 384s)
+  1001/3136 installed (6/s, ETA 388s)
+  1033/3136 installed (6/s, ETA 381s)
+  1065/3136 installed (6/s, ETA 373s)
+  1098/3136 installed (6/s, ETA 366s)
+  1128/3136 installed (6/s, ETA 360s)
+  1158/3136 installed (6/s, ETA 354s)
+  1181/3136 installed (6/s, ETA 352s)
+  1197/3136 installed (6/s, ETA 353s)
+  1228/3136 installed (6/s, ETA 346s)
+  1260/3136 installed (6/s, ETA 339s)
+  1289/3136 installed (6/s, ETA 334s)
+  1320/3136 installed (6/s, ETA 327s)
+  1351/3136 installed (6/s, ETA 321s)
+  1375/3136 installed (6/s, ETA 318s)
+  1389/3136 installed (5/s, ETA 318s)
+  1419/3136 installed (5/s, ETA 313s)
+  1451/3136 installed (6/s, ETA 306s)
+  1483/3136 installed (6/s, ETA 299s)
+  1515/3136 installed (6/s, ETA 293s)
+  1547/3136 installed (6/s, ETA 286s)
+  1573/3136 installed (5/s, ETA 285s)
+  1606/3136 installed (6/s, ETA 278s)
+  1639/3136 installed (6/s, ETA 271s)
+  1673/3136 installed (6/s, ETA 264s)
+  1705/3136 installed (6/s, ETA 257s)
+  1737/3136 installed (6/s, ETA 251s)
+  1765/3136 installed (6/s, ETA 246s)
+  1775/3136 installed (6/s, ETA 247s)
+  1807/3136 installed (6/s, ETA 241s)
+  1839/3136 installed (6/s, ETA 234s)
+  1872/3136 installed (6/s, ETA 228s)
+  1905/3136 installed (6/s, ETA 221s)
+  1937/3136 installed (6/s, ETA 215s)
+  1963/3136 installed (6/s, ETA 211s)
+  1978/3136 installed (6/s, ETA 209s)
+  2009/3136 installed (6/s, ETA 203s)
+  2041/3136 installed (6/s, ETA 197s)
+  2074/3136 installed (6/s, ETA 191s)
+  2108/3136 installed (6/s, ETA 184s)
+  2143/3136 installed (6/s, ETA 177s)
+  2170/3136 installed (6/s, ETA 173s)
+  2187/3136 installed (6/s, ETA 171s)
+  2220/3136 installed (6/s, ETA 164s)
+  2254/3136 installed (6/s, ETA 158s)
+  2287/3136 installed (6/s, ETA 152s)
+  2319/3136 installed (6/s, ETA 146s)
+  2351/3136 installed (6/s, ETA 140s)
+  2375/3136 installed (6/s, ETA 137s)
+  2407/3136 installed (6/s, ETA 131s)
+  2438/3136 installed (6/s, ETA 125s)
+  2471/3136 installed (6/s, ETA 119s)
+  2500/3136 installed (6/s, ETA 114s)
+  2531/3136 installed (6/s, ETA 108s)
+  2554/3136 installed (6/s, ETA 104s)
+  2570/3136 installed (6/s, ETA 102s)
+  2602/3136 installed (6/s, ETA 96s)
+  2634/3136 installed (6/s, ETA 90s)
+  2667/3136 installed (6/s, ETA 84s)
+  2698/3136 installed (6/s, ETA 78s)
+  2730/3136 installed (6/s, ETA 72s)
+  2749/3136 installed (6/s, ETA 69s)
+  2763/3136 installed (6/s, ETA 67s)
+  2791/3136 installed (6/s, ETA 62s)
+  2821/3136 installed (6/s, ETA 57s)
+  2852/3136 installed (6/s, ETA 51s)
+  2884/3136 installed (6/s, ETA 45s)
+  2914/3136 installed (6/s, ETA 40s)
+  2941/3136 installed (6/s, ETA 35s)
+  2968/3136 installed (6/s, ETA 30s)
+  3000/3136 installed (6/s, ETA 25s)
+  3032/3136 installed (6/s, ETA 19s)
+  3065/3136 installed (6/s, ETA 13s)
+  3098/3136 installed (6/s, ETA 7s)
+  3131/3136 installed (6/s, ETA 1s)
+  Done: 3136/3136 installed in 562s
+  install complete in 562s
+
+[3/4] Wrapping model in lm-eval HFLM...
+2026-04-10:19:00:11,021 WARNING  [huggingface.py:96] `pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+2026-04-10:19:00:11,045 WARNING  [huggingface.py:276] Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+
+[4/4] Running lm-eval on tasks: ['wikitext', 'hellaswag', 'arc_challenge', 'arc_easy', 'piqa']
+2026-04-10:19:00:11,057 INFO     [evaluator.py:161] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234
+2026-04-10:19:00:11,057 INFO     [evaluator.py:214] Using pre-initialized model
+2026-04-10:19:00:11,318 INFO     [__init__.py:491] `group` and `group_alias` keys in TaskConfigs are deprecated and will be removed in v0.4.5 of lm_eval. The new `tag` field will be used to allow for a shortcut to a group of tasks one does not wish to aggregate metrics across. `group`s which aggregate across subtasks must be only defined in a separate group config file, which will be the official way to create groups that support cross-task aggregation as in `mmlu`. Please see the v0.4.4 patch notes and our documentation: https://github.com/EleutherAI/lm-evaluation-harness/blob/main/docs/new_task_guide.md#advanced-group-configs for more information.
+2026-04-10:19:00:15,347 WARNING  [task.py:803] [Task: wikitext] metric word_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2026-04-10:19:00:15,347 WARNING  [task.py:815] [Task: wikitext] metric word_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2026-04-10:19:00:15,347 WARNING  [task.py:803] [Task: wikitext] metric byte_perplexity is defined, but aggregation is not. using default aggregation=weighted_perplexity
+2026-04-10:19:00:15,347 WARNING  [task.py:815] [Task: wikitext] metric byte_perplexity is defined, but higher_is_better is not. using default higher_is_better=False
+2026-04-10:19:00:15,347 WARNING  [task.py:803] [Task: wikitext] metric bits_per_byte is defined, but aggregation is not. using default aggregation=bits_per_byte
+2026-04-10:19:00:15,347 WARNING  [task.py:815] [Task: wikitext] metric bits_per_byte is defined, but higher_is_better is not. using default higher_is_better=False
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 8.76kB [00:00, 31.2MB/s]
+Downloading data:   0%|          | 0.00/6.18M [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.18M/6.18M [00:00<00:00, 6.19MB/s]Downloading data: 100%|██████████| 6.18M/6.18M [00:01<00:00, 5.98MB/s]
+Downloading data:   0%|          | 0.00/641k [00:00<?, ?B/s]Downloading data: 100%|██████████| 641k/641k [00:00<00:00, 1.17MB/s]Downloading data: 100%|██████████| 641k/641k [00:00<00:00, 1.16MB/s]
+Downloading data:   0%|          | 0.00/715k [00:00<?, ?B/s]Downloading data: 100%|██████████| 715k/715k [00:00<00:00, 2.13MB/s]Downloading data: 100%|██████████| 715k/715k [00:00<00:00, 2.10MB/s]
+Generating train split:   0%|          | 0/629 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 629/629 [00:00<00:00, 2284.18 examples/s]Generating train split: 100%|██████████| 629/629 [00:00<00:00, 2263.87 examples/s]
+Generating validation split:   0%|          | 0/60 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 60/60 [00:00<00:00, 4969.85 examples/s]
+Generating test split:   0%|          | 0/62 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 62/62 [00:00<00:00, 11606.64 examples/s]
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 7.02kB [00:00, 30.5MB/s]
+Downloading data:   0%|          | 0.00/24.4M [00:00<?, ?B/s]Downloading data:  43%|████▎     | 10.5M/24.4M [00:01<00:01, 7.79MB/s]Downloading data:  86%|████████▌ | 21.0M/24.4M [00:01<00:00, 12.1MB/s]Downloading data: 100%|██████████| 24.4M/24.4M [00:02<00:00, 11.5MB/s]Downloading data: 100%|██████████| 24.4M/24.4M [00:02<00:00, 10.9MB/s]
+Downloading data:   0%|          | 0.00/6.11M [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.11M/6.11M [00:03<00:00, 1.64MB/s]Downloading data: 100%|██████████| 6.11M/6.11M [00:03<00:00, 1.61MB/s]
+Downloading data:   0%|          | 0.00/6.32M [00:00<?, ?B/s]Downloading data: 100%|██████████| 6.32M/6.32M [00:01<00:00, 5.35MB/s]Downloading data: 100%|██████████| 6.32M/6.32M [00:01<00:00, 5.21MB/s]
+Generating train split:   0%|          | 0/39905 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 39905/39905 [00:00<00:00, 406756.28 examples/s]
+Generating test split:   0%|          | 0/10003 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 10003/10003 [00:00<00:00, 147289.72 examples/s]
+Generating validation split:   0%|          | 0/10042 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 10042/10042 [00:00<00:00, 142075.24 examples/s]
+Map:   0%|          | 0/39905 [00:00<?, ? examples/s]Map:   6%|▌         | 2199/39905 [00:00<00:02, 17890.89 examples/s]Map:  10%|█         | 4184/39905 [00:00<00:01, 18942.51 examples/s]Map:  18%|█▊        | 7224/39905 [00:00<00:02, 15721.95 examples/s]Map:  24%|██▍       | 9568/39905 [00:00<00:01, 17956.44 examples/s]Map:  30%|██▉       | 11849/39905 [00:00<00:01, 19374.76 examples/s]Map:  35%|███▌      | 14000/39905 [00:00<00:01, 19477.79 examples/s]Map:  43%|████▎     | 17009/39905 [00:00<00:01, 18737.64 examples/s]Map:  48%|████▊     | 19000/39905 [00:01<00:01, 18795.80 examples/s]Map:  55%|█████▍    | 21825/39905 [00:01<00:01, 16075.17 examples/s]Map:  60%|██████    | 24000/39905 [00:01<00:01, 15329.43 examples/s]Map:  65%|██████▌   | 26000/39905 [00:01<00:00, 15898.33 examples/s]Map:  70%|███████   | 28000/39905 [00:01<00:00, 16529.83 examples/s]Map:  75%|███████▌  | 30000/39905 [00:01<00:00, 16740.52 examples/s]Map:  81%|████████  | 32311/39905 [00:01<00:00, 18351.74 examples/s]Map:  87%|████████▋ | 34628/39905 [00:01<00:00, 19630.69 examples/s]Map:  92%|█████████▏| 36742/39905 [00:02<00:00, 15806.50 examples/s]Map:  98%|█████████▊| 39052/39905 [00:02<00:00, 15676.36 examples/s]Map: 100%|██████████| 39905/39905 [00:02<00:00, 16976.91 examples/s]
+Map:   0%|          | 0/10042 [00:00<?, ? examples/s]Map:  17%|█▋        | 1753/10042 [00:00<00:00, 17413.35 examples/s]Map:  37%|███▋      | 3729/10042 [00:00<00:00, 18782.75 examples/s]Map:  60%|█████▉    | 6000/10042 [00:00<00:00, 16358.16 examples/s]Map:  80%|███████▉  | 8000/10042 [00:00<00:00, 16813.71 examples/s]Map: 100%|██████████| 10042/10042 [00:00<00:00, 17639.40 examples/s]Map: 100%|██████████| 10042/10042 [00:00<00:00, 17382.55 examples/s]
+Downloading readme: 0.00B [00:00, ?B/s]Downloading readme: 9.00kB [00:00, 31.3MB/s]
+Downloading data:   0%|          | 0.00/190k [00:00<?, ?B/s]Downloading data: 100%|██████████| 190k/190k [00:00<00:00, 644kB/s]Downloading data: 100%|██████████| 190k/190k [00:00<00:00, 642kB/s]
+Downloading data:   0%|          | 0.00/204k [00:00<?, ?B/s]Downloading data: 100%|██████████| 204k/204k [00:00<00:00, 682kB/s]Downloading data: 100%|██████████| 204k/204k [00:00<00:00, 681kB/s]
+Downloading data:   0%|          | 0.00/55.7k [00:00<?, ?B/s]Downloading data: 100%|██████████| 55.7k/55.7k [00:00<00:00, 196kB/s]Downloading data: 100%|██████████| 55.7k/55.7k [00:00<00:00, 196kB/s]
+Generating train split:   0%|          | 0/1119 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 1119/1119 [00:00<00:00, 435787.02 examples/s]
+Generating test split:   0%|          | 0/1172 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1172/1172 [00:00<00:00, 560643.74 examples/s]
+Generating validation split:   0%|          | 0/299 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 299/299 [00:00<00:00, 247210.11 examples/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/hungryeagle/qtip-olmoe/src/eval/run_lm_eval.py", line 161, in <module>
+    main()
+  File "/home/hungryeagle/qtip-olmoe/src/eval/run_lm_eval.py", line 95, in main
+    results = simple_evaluate(
+              ^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/lm_eval/utils.py", line 397, in _wrapper
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/lm_eval/evaluator.py", line 232, in simple_evaluate
+    task_dict = get_task_dict(tasks, task_manager)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/lm_eval/tasks/__init__.py", line 618, in get_task_dict
+    task_name_from_string_dict = task_manager.load_task_or_group(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/lm_eval/tasks/__init__.py", line 410, in load_task_or_group
+    collections.ChainMap(*map(self._load_individual_task_or_group, task_list))
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/lm_eval/tasks/__init__.py", line 310, in _load_individual_task_or_group
+    return _load_task(task_config, task=name_or_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/lm_eval/tasks/__init__.py", line 276, in _load_task
+    task_object = ConfigurableTask(config=config)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/lm_eval/api/task.py", line 822, in __init__
+    self.download(self.config.dataset_kwargs)
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/lm_eval/api/task.py", line 929, in download
+    self.dataset = datasets.load_dataset(
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/load.py", line 2587, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/load.py", line 2296, in load_dataset_builder
+    builder_instance: DatasetBuilder = builder_cls(
+                                       ^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/builder.py", line 426, in __init__
+    self.info = DatasetInfo.from_directory(self._cache_dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/info.py", line 357, in from_directory
+    return cls.from_dict(dataset_info_dict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/info.py", line 362, in from_dict
+    return cls(**{k: v for k, v in dataset_info_dict.items() if k in field_names})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 21, in __init__
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/info.py", line 175, in __post_init__
+    self.features = Features.from_dict(self.features)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/features/features.py", line 1750, in from_dict
+    obj = generate_from_dict(dic)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/features/features.py", line 1392, in generate_from_dict
+    return {key: generate_from_dict(value) for key, value in obj.items()}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/features/features.py", line 1392, in generate_from_dict
+    return {key: generate_from_dict(value) for key, value in obj.items()}
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/datasets/features/features.py", line 1403, in generate_from_dict
+    field_names = {f.name for f in fields(class_type)}
+                                   ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/dataclasses.py", line 1282, in fields
+    raise TypeError('must be called with a dataclass type or instance') from None
+TypeError: must be called with a dataclass type or instance

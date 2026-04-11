@@ -1,0 +1,18 @@
+============================================================
+lm-eval run: config=per_expert
+  tasks: ['wikitext', 'hellaswag', 'arc_challenge', 'arc_easy', 'piqa']
+  num_fewshot: 0
+  batch_size: auto:4
+============================================================
+
+[1/4] Loading OLMoE in bf16 on GPU...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:22,  7.75it/s]Loading weights:   8%|▊         | 15/179 [00:01<00:10, 14.98it/s]Loading weights:  15%|█▍        | 26/179 [00:04<00:32,  4.74it/s]Loading weights:  21%|██        | 37/179 [00:05<00:21,  6.48it/s]Loading weights:  27%|██▋       | 48/179 [00:06<00:16,  7.75it/s]Loading weights:  33%|███▎      | 59/179 [00:07<00:14,  8.32it/s]Loading weights:  39%|███▉      | 70/179 [00:08<00:11,  9.26it/s]Loading weights:  42%|████▏     | 76/179 [00:08<00:09, 11.18it/s]Loading weights:  45%|████▌     | 81/179 [00:10<00:12,  7.62it/s]Loading weights:  51%|█████▏    | 92/179 [00:10<00:08, 10.87it/s]Loading weights:  58%|█████▊    | 103/179 [00:11<00:06, 11.27it/s]Loading weights:  64%|██████▎   | 114/179 [00:12<00:06, 10.10it/s]Loading weights:  66%|██████▋   | 119/179 [00:12<00:05, 11.66it/s]Loading weights:  70%|██████▉   | 125/179 [00:14<00:06,  8.51it/s]Loading weights:  71%|███████   | 127/179 [00:14<00:06,  8.36it/s]Loading weights:  76%|███████▌  | 136/179 [00:15<00:04, 10.23it/s]Loading weights:  77%|███████▋  | 138/179 [00:15<00:04,  9.77it/s]Loading weights:  82%|████████▏ | 147/179 [00:17<00:04,  6.81it/s]Loading weights:  83%|████████▎ | 149/179 [00:17<00:04,  6.43it/s]Loading weights:  86%|████████▌ | 154/179 [00:17<00:02,  8.55it/s]Loading weights:  88%|████████▊ | 158/179 [00:19<00:03,  5.87it/s]Loading weights:  89%|████████▉ | 160/179 [00:19<00:02,  6.58it/s]Loading weights:  92%|█████████▏| 164/179 [00:20<00:02,  5.92it/s]Loading weights:  94%|█████████▍| 169/179 [00:21<00:02,  4.49it/s]Loading weights:  95%|█████████▍| 170/179 [00:22<00:02,  4.29it/s]Loading weights: 100%|██████████| 179/179 [00:22<00:00,  8.11it/s]
+  loaded in 26s
+
+[2/4] Installing 2-bit quantized weights from cache/quantized...
+Installing 3136 quantized targets from cache/quantized
+  18/3136 installed (4/s, ETA 889s)
+  46/3136 installed (5/s, ETA 686s)
+  58/3136 installed (4/s, ETA 808s)
+  87/3136 installed (4/s, ETA 714s)
+  114/3136 installed (4/s, ETA 673s)

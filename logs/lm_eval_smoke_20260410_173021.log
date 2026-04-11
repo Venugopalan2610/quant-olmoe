@@ -1,0 +1,164 @@
+============================================================
+lm-eval run: config=per_expert
+  tasks: ['hellaswag', 'arc_easy']
+  num_fewshot: 0
+  batch_size: 1
+  limit (per task): 10
+============================================================
+
+[1/4] Loading OLMoE in bf16 on GPU...
+Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<00:18,  9.86it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:33,  5.15it/s]Loading weights:   8%|▊         | 15/179 [00:01<00:14, 11.45it/s]Loading weights:  15%|█▍        | 26/179 [00:02<00:11, 12.92it/s]Loading weights:  21%|██        | 37/179 [00:02<00:09, 14.20it/s]Loading weights:  27%|██▋       | 48/179 [00:03<00:08, 14.70it/s]Loading weights:  33%|███▎      | 59/179 [00:04<00:08, 14.32it/s]Loading weights:  39%|███▉      | 70/179 [00:05<00:07, 14.54it/s]Loading weights:  45%|████▌     | 81/179 [00:05<00:06, 14.50it/s]Loading weights:  51%|█████▏    | 92/179 [00:06<00:06, 13.74it/s]Loading weights:  58%|█████▊    | 103/179 [00:08<00:07, 10.34it/s]Loading weights:  60%|██████    | 108/179 [00:08<00:06, 11.74it/s]Loading weights:  64%|██████▎   | 114/179 [00:12<00:13,  4.94it/s]Loading weights:  66%|██████▋   | 119/179 [00:12<00:10,  5.96it/s]Loading weights:  70%|██████▉   | 125/179 [00:16<00:17,  3.13it/s]Loading weights:  71%|███████   | 127/179 [00:17<00:16,  3.24it/s]Loading weights:  76%|███████▌  | 136/179 [00:20<00:13,  3.14it/s]Loading weights:  77%|███████▋  | 137/179 [00:21<00:16,  2.55it/s]Loading weights:  82%|████████▏ | 147/179 [00:25<00:11,  2.71it/s]Loading weights:  83%|████████▎ | 148/179 [00:28<00:16,  1.83it/s]Loading weights:  88%|████████▊ | 158/179 [00:32<00:09,  2.14it/s]Loading weights:  89%|████████▉ | 159/179 [00:33<00:10,  1.89it/s]Loading weights:  94%|█████████▍| 169/179 [00:36<00:04,  2.50it/s]Loading weights:  95%|█████████▍| 170/179 [00:37<00:03,  2.30it/s]Loading weights: 100%|██████████| 179/179 [00:37<00:00,  4.82it/s]
+  loaded in 43s
+
+[2/4] Installing 2-bit quantized weights from cache/quantized...
+Installing 3136 quantized targets from cache/quantized
+  24/3136 installed (5/s, ETA 650s)
+  47/3136 installed (5/s, ETA 666s)
+  77/3136 installed (5/s, ETA 602s)
+  110/3136 installed (5/s, ETA 558s)
+  143/3136 installed (6/s, ETA 532s)
+  175/3136 installed (6/s, ETA 517s)
+  201/3136 installed (6/s, ETA 520s)
+  225/3136 installed (5/s, ETA 529s)
+  256/3136 installed (6/s, ETA 518s)
+  290/3136 installed (6/s, ETA 502s)
+  324/3136 installed (6/s, ETA 487s)
+  357/3136 installed (6/s, ETA 476s)
+  389/3136 installed (6/s, ETA 468s)
+  416/3136 installed (6/s, ETA 467s)
+  438/3136 installed (6/s, ETA 471s)
+  469/3136 installed (6/s, ETA 463s)
+  501/3136 installed (6/s, ETA 455s)
+  532/3136 installed (6/s, ETA 448s)
+  564/3136 installed (6/s, ETA 441s)
+  592/3136 installed (6/s, ETA 438s)
+  622/3136 installed (6/s, ETA 435s)
+  654/3136 installed (6/s, ETA 428s)
+  685/3136 installed (6/s, ETA 422s)
+  717/3136 installed (6/s, ETA 415s)
+  750/3136 installed (6/s, ETA 408s)
+  783/3136 installed (6/s, ETA 400s)
+  810/3136 installed (6/s, ETA 397s)
+  836/3136 installed (6/s, ETA 394s)
+  869/3136 installed (6/s, ETA 387s)
+  902/3136 installed (6/s, ETA 380s)
+  935/3136 installed (6/s, ETA 373s)
+  969/3136 installed (6/s, ETA 366s)
+  990/3136 installed (6/s, ETA 366s)
+  1018/3136 installed (6/s, ETA 363s)
+  1050/3136 installed (6/s, ETA 357s)
+  1082/3136 installed (6/s, ETA 350s)
+  1112/3136 installed (6/s, ETA 345s)
+  1144/3136 installed (6/s, ETA 339s)
+  1174/3136 installed (6/s, ETA 334s)
+  1192/3136 installed (6/s, ETA 334s)
+  1217/3136 installed (6/s, ETA 331s)
+  1250/3136 installed (6/s, ETA 325s)
+  1281/3136 installed (6/s, ETA 319s)
+  1313/3136 installed (6/s, ETA 313s)
+  1345/3136 installed (6/s, ETA 307s)
+  1373/3136 installed (6/s, ETA 302s)
+  1396/3136 installed (6/s, ETA 301s)
+  1427/3136 installed (6/s, ETA 295s)
+  1456/3136 installed (6/s, ETA 290s)
+  1486/3136 installed (6/s, ETA 285s)
+  1516/3136 installed (6/s, ETA 279s)
+  1545/3136 installed (6/s, ETA 274s)
+  1571/3136 installed (6/s, ETA 271s)
+  1593/3136 installed (6/s, ETA 268s)
+  1625/3136 installed (6/s, ETA 262s)
+  1656/3136 installed (6/s, ETA 256s)
+  1688/3136 installed (6/s, ETA 251s)
+  1719/3136 installed (6/s, ETA 245s)
+  1750/3136 installed (6/s, ETA 239s)
+  1770/3136 installed (6/s, ETA 238s)
+  1800/3136 installed (6/s, ETA 232s)
+  1831/3136 installed (6/s, ETA 227s)
+  1862/3136 installed (6/s, ETA 221s)
+  1893/3136 installed (6/s, ETA 216s)
+  1924/3136 installed (6/s, ETA 210s)
+  1955/3136 installed (6/s, ETA 205s)
+  1970/3136 installed (6/s, ETA 203s)
+  2001/3136 installed (6/s, ETA 198s)
+  2033/3136 installed (6/s, ETA 192s)
+  2066/3136 installed (6/s, ETA 186s)
+  2095/3136 installed (6/s, ETA 181s)
+  2125/3136 installed (6/s, ETA 176s)
+  2154/3136 installed (6/s, ETA 171s)
+  2176/3136 installed (6/s, ETA 168s)
+  2207/3136 installed (6/s, ETA 162s)
+  2240/3136 installed (6/s, ETA 156s)
+  2272/3136 installed (6/s, ETA 150s)
+  2303/3136 installed (6/s, ETA 145s)
+  2334/3136 installed (6/s, ETA 139s)
+  2355/3136 installed (6/s, ETA 136s)
+  2387/3136 installed (6/s, ETA 131s)
+  2419/3136 installed (6/s, ETA 125s)
+  2451/3136 installed (6/s, ETA 119s)
+  2483/3136 installed (6/s, ETA 113s)
+  2515/3136 installed (6/s, ETA 108s)
+  2543/3136 installed (6/s, ETA 103s)
+  2565/3136 installed (6/s, ETA 99s)
+  2598/3136 installed (6/s, ETA 94s)
+  2630/3136 installed (6/s, ETA 88s)
+  2662/3136 installed (6/s, ETA 82s)
+  2694/3136 installed (6/s, ETA 77s)
+  2725/3136 installed (6/s, ETA 71s)
+  2746/3136 installed (6/s, ETA 68s)
+  2774/3136 installed (6/s, ETA 63s)
+  2805/3136 installed (6/s, ETA 58s)
+  2837/3136 installed (6/s, ETA 52s)
+  2869/3136 installed (6/s, ETA 46s)
+  2900/3136 installed (6/s, ETA 41s)
+  2927/3136 installed (6/s, ETA 36s)
+  2950/3136 installed (6/s, ETA 32s)
+  2984/3136 installed (6/s, ETA 26s)
+  3016/3136 installed (6/s, ETA 21s)
+  3049/3136 installed (6/s, ETA 15s)
+  3082/3136 installed (6/s, ETA 9s)
+  3113/3136 installed (6/s, ETA 4s)
+  3136/3136 installed (6/s, ETA 0s)
+  Done: 3136/3136 installed in 544s
+  install complete in 544s
+
+[3/4] Wrapping model in lm-eval HFLM...
+`pretrained` model kwarg is not of type `str`. Many other model arguments may be ignored. Please do not launch via accelerate or use `parallelize=True` if passing an existing model this way.
+Passed an already-initialized model through `pretrained`, assuming single-process call to evaluate() or custom distributed integration
+
+[4/4] Running lm-eval on tasks: ['hellaswag', 'arc_easy']
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating train split:   0%|          | 0/39905 [00:00<?, ? examples/s]Generating train split:   3%|▎         | 1000/39905 [00:00<00:09, 4161.67 examples/s]Generating train split:  50%|█████     | 20000/39905 [00:00<00:00, 70558.09 examples/s]Generating train split:  88%|████████▊ | 35000/39905 [00:00<00:00, 82173.91 examples/s]Generating train split: 100%|██████████| 39905/39905 [00:00<00:00, 72773.48 examples/s]
+Generating test split:   0%|          | 0/10003 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 10003/10003 [00:00<00:00, 278936.15 examples/s]
+Generating validation split:   0%|          | 0/10042 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 10042/10042 [00:00<00:00, 159754.22 examples/s]
+Map:   0%|          | 0/39905 [00:00<?, ? examples/s]Map:   3%|▎         | 1058/39905 [00:00<00:03, 10512.89 examples/s]Map:   8%|▊         | 3000/39905 [00:00<00:02, 14562.79 examples/s]Map:  13%|█▎        | 5067/39905 [00:00<00:02, 16943.63 examples/s]Map:  18%|█▊        | 7075/39905 [00:00<00:01, 18122.65 examples/s]Map:  23%|██▎       | 9000/39905 [00:00<00:01, 18473.39 examples/s]Map:  28%|██▊       | 11362/39905 [00:00<00:01, 20190.00 examples/s]Map:  36%|███▌      | 14284/39905 [00:00<00:01, 17161.02 examples/s]Map:  41%|████      | 16324/39905 [00:00<00:01, 17984.15 examples/s]Map:  46%|████▌     | 18276/39905 [00:01<00:01, 18392.66 examples/s]Map:  51%|█████     | 20321/39905 [00:01<00:01, 18959.80 examples/s]Map:  58%|█████▊    | 23000/39905 [00:01<00:00, 18300.08 examples/s]Map:  63%|██████▎   | 25000/39905 [00:01<00:00, 17189.33 examples/s]Map:  69%|██████▉   | 27516/39905 [00:01<00:00, 15508.53 examples/s]Map:  75%|███████▌  | 30000/39905 [00:01<00:00, 14767.32 examples/s]Map:  80%|████████  | 32000/39905 [00:01<00:00, 14806.18 examples/s]Map:  85%|████████▌ | 34000/39905 [00:02<00:00, 15264.60 examples/s]Map:  90%|█████████ | 36000/39905 [00:02<00:00, 15640.94 examples/s]Map:  95%|█████████▌| 38000/39905 [00:02<00:00, 15949.08 examples/s]Map: 100%|██████████| 39905/39905 [00:02<00:00, 13331.37 examples/s]Map: 100%|██████████| 39905/39905 [00:02<00:00, 15993.88 examples/s]
+Map:   0%|          | 0/10042 [00:00<?, ? examples/s]Map:  17%|█▋        | 1744/10042 [00:00<00:00, 17320.84 examples/s]Map:  37%|███▋      | 3725/10042 [00:00<00:00, 18774.99 examples/s]Map:  60%|█████▉    | 6000/10042 [00:00<00:00, 15309.41 examples/s]Map:  80%|███████▉  | 8000/10042 [00:00<00:00, 15433.21 examples/s]Map: 100%|█████████▉| 10000/10042 [00:00<00:00, 16123.98 examples/s]Map: 100%|██████████| 10042/10042 [00:00<00:00, 16079.83 examples/s]
+Generating train split:   0%|          | 0/2251 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 2251/2251 [00:00<00:00, 133781.73 examples/s]
+Generating test split:   0%|          | 0/2376 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 2376/2376 [00:00<00:00, 401145.85 examples/s]
+Generating validation split:   0%|          | 0/570 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 570/570 [00:00<00:00, 184714.00 examples/s]
+Overwriting default num_fewshot of arc_easy from None to 0
+Overwriting default num_fewshot of hellaswag from None to 0
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 1094.63it/s]
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 2309.77it/s]
+Running loglikelihood requests:   0%|          | 0/80 [00:00<?, ?it/s]Running loglikelihood requests:   1%|▏         | 1/80 [00:05<06:57,  5.28s/it]Running loglikelihood requests:   2%|▎         | 2/80 [00:05<03:08,  2.41s/it]Running loglikelihood requests:   4%|▍         | 3/80 [00:06<01:54,  1.48s/it]Running loglikelihood requests:   5%|▌         | 4/80 [00:06<01:20,  1.05s/it]Running loglikelihood requests:   6%|▋         | 5/80 [00:06<01:02,  1.20it/s]Running loglikelihood requests:   8%|▊         | 6/80 [00:07<00:50,  1.47it/s]Running loglikelihood requests:   9%|▉         | 7/80 [00:07<00:43,  1.68it/s]Running loglikelihood requests:  10%|█         | 8/80 [00:08<00:38,  1.85it/s]Running loglikelihood requests:  11%|█▏        | 9/80 [00:08<00:36,  1.96it/s]Running loglikelihood requests:  12%|█▎        | 10/80 [00:08<00:32,  2.14it/s]Running loglikelihood requests:  14%|█▍        | 11/80 [00:09<00:30,  2.28it/s]Running loglikelihood requests:  15%|█▌        | 12/80 [00:09<00:29,  2.29it/s]Running loglikelihood requests:  16%|█▋        | 13/80 [00:10<00:27,  2.41it/s]Running loglikelihood requests:  18%|█▊        | 14/80 [00:10<00:26,  2.49it/s]Running loglikelihood requests:  19%|█▉        | 15/80 [00:10<00:25,  2.52it/s]Running loglikelihood requests:  20%|██        | 16/80 [00:11<00:25,  2.51it/s]Running loglikelihood requests:  21%|██▏       | 17/80 [00:11<00:24,  2.54it/s]Running loglikelihood requests:  22%|██▎       | 18/80 [00:12<00:24,  2.54it/s]Running loglikelihood requests:  24%|██▍       | 19/80 [00:12<00:24,  2.47it/s]Running loglikelihood requests:  25%|██▌       | 20/80 [00:12<00:23,  2.56it/s]Running loglikelihood requests:  26%|██▋       | 21/80 [00:13<00:23,  2.49it/s]Running loglikelihood requests:  28%|██▊       | 22/80 [00:13<00:23,  2.46it/s]Running loglikelihood requests:  29%|██▉       | 23/80 [00:14<00:22,  2.53it/s]Running loglikelihood requests:  30%|███       | 24/80 [00:14<00:22,  2.52it/s]Running loglikelihood requests:  31%|███▏      | 25/80 [00:14<00:22,  2.49it/s]Running loglikelihood requests:  35%|███▌      | 28/80 [00:15<00:13,  3.98it/s]Running loglikelihood requests:  36%|███▋      | 29/80 [00:15<00:14,  3.53it/s]Running loglikelihood requests:  38%|███▊      | 30/80 [00:16<00:15,  3.17it/s]Running loglikelihood requests:  39%|███▉      | 31/80 [00:16<00:16,  2.93it/s]Running loglikelihood requests:  40%|████      | 32/80 [00:16<00:17,  2.77it/s]Running loglikelihood requests:  41%|████▏     | 33/80 [00:17<00:17,  2.63it/s]Running loglikelihood requests:  42%|████▎     | 34/80 [00:17<00:17,  2.58it/s]Running loglikelihood requests:  44%|████▍     | 35/80 [00:18<00:17,  2.51it/s]Running loglikelihood requests:  45%|████▌     | 36/80 [00:18<00:17,  2.56it/s]Running loglikelihood requests:  46%|████▋     | 37/80 [00:18<00:16,  2.54it/s]Running loglikelihood requests:  48%|████▊     | 38/80 [00:19<00:16,  2.50it/s]Running loglikelihood requests:  49%|████▉     | 39/80 [00:19<00:16,  2.46it/s]Running loglikelihood requests:  50%|█████     | 40/80 [00:20<00:16,  2.42it/s]Running loglikelihood requests:  51%|█████▏    | 41/80 [00:20<00:15,  2.54it/s]Running loglikelihood requests:  52%|█████▎    | 42/80 [00:21<00:15,  2.44it/s]Running loglikelihood requests:  54%|█████▍    | 43/80 [00:21<00:15,  2.42it/s]Running loglikelihood requests:  55%|█████▌    | 44/80 [00:21<00:15,  2.37it/s]Running loglikelihood requests:  56%|█████▋    | 45/80 [00:22<00:14,  2.34it/s]Running loglikelihood requests:  57%|█████▊    | 46/80 [00:22<00:14,  2.34it/s]Running loglikelihood requests:  59%|█████▉    | 47/80 [00:23<00:14,  2.35it/s]Running loglikelihood requests:  60%|██████    | 48/80 [00:23<00:13,  2.34it/s]Running loglikelihood requests:  61%|██████▏   | 49/80 [00:24<00:13,  2.24it/s]Running loglikelihood requests:  62%|██████▎   | 50/80 [00:24<00:12,  2.37it/s]Running loglikelihood requests:  64%|██████▍   | 51/80 [00:24<00:11,  2.45it/s]Running loglikelihood requests:  65%|██████▌   | 52/80 [00:25<00:12,  2.33it/s]Running loglikelihood requests:  66%|██████▋   | 53/80 [00:25<00:11,  2.33it/s]Running loglikelihood requests:  68%|██████▊   | 54/80 [00:26<00:10,  2.42it/s]Running loglikelihood requests:  69%|██████▉   | 55/80 [00:26<00:10,  2.35it/s]Running loglikelihood requests:  70%|███████   | 56/80 [00:27<00:10,  2.34it/s]Running loglikelihood requests:  71%|███████▏  | 57/80 [00:27<00:09,  2.43it/s]Running loglikelihood requests:  72%|███████▎  | 58/80 [00:27<00:09,  2.36it/s]Running loglikelihood requests:  74%|███████▍  | 59/80 [00:28<00:09,  2.31it/s]Running loglikelihood requests:  75%|███████▌  | 60/80 [00:28<00:08,  2.34it/s]Running loglikelihood requests:  76%|███████▋  | 61/80 [00:29<00:07,  2.41it/s]Running loglikelihood requests:  78%|███████▊  | 62/80 [00:29<00:07,  2.37it/s]Running loglikelihood requests:  79%|███████▉  | 63/80 [00:29<00:07,  2.38it/s]Running loglikelihood requests:  80%|████████  | 64/80 [00:30<00:06,  2.48it/s]Running loglikelihood requests:  81%|████████▏ | 65/80 [00:30<00:06,  2.50it/s]Running loglikelihood requests:  82%|████████▎ | 66/80 [00:31<00:05,  2.51it/s]Running loglikelihood requests:  84%|████████▍ | 67/80 [00:31<00:05,  2.47it/s]Running loglikelihood requests:  85%|████████▌ | 68/80 [00:31<00:04,  2.46it/s]Running loglikelihood requests:  86%|████████▋ | 69/80 [00:33<00:08,  1.25it/s]Running loglikelihood requests:  88%|████████▊ | 70/80 [00:33<00:06,  1.50it/s]Running loglikelihood requests:  89%|████████▉ | 71/80 [00:34<00:05,  1.77it/s]Running loglikelihood requests:  90%|█████████ | 72/80 [00:34<00:04,  1.98it/s]Running loglikelihood requests:  91%|█████████▏| 73/80 [00:35<00:03,  2.06it/s]Running loglikelihood requests:  96%|█████████▋| 77/80 [00:35<00:00,  3.54it/s]Running loglikelihood requests:  98%|█████████▊| 78/80 [00:36<00:00,  3.41it/s]Running loglikelihood requests:  99%|█████████▉| 79/80 [00:36<00:00,  3.24it/s]Running loglikelihood requests: 100%|██████████| 80/80 [00:36<00:00,  3.13it/s]Running loglikelihood requests: 100%|██████████| 80/80 [00:36<00:00,  2.17it/s]
+
+lm-eval finished in 68s (1.1 min)
+
+============================================================
+RESULTS SUMMARY
+============================================================
+
+arc_easy:
+  alias: arc_easy
+  acc,none: 0.8000
+  acc_stderr,none: 0.1333
+  acc_norm,none: 0.6000
+  acc_norm_stderr,none: 0.1633
+
+hellaswag:
+  alias: hellaswag
+  acc,none: 0.3000
+  acc_stderr,none: 0.1528
+  acc_norm,none: 0.3000
+  acc_norm_stderr,none: 0.1528
+
+Results saved to results/lm_eval_per_expert_20260410_174126.json

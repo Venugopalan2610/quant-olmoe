@@ -80,84 +80,43 @@ def _make_attn_target(model, layer_idx, proj):
 
 
 def _make_expert_target(model, layer_idx, expert_idx, proj):
-    """Build a QuantTarget for an expert projection.
+    """Build a QuantTarget for an expert projection (a slice of fused storage).
 
-    Handles both OLMoE expert layouts seen in transformers 5.x:
-
-    1. FUSED layout (OlmoeExperts class, fast loader path):
-         experts.gate_up_proj: Parameter (num_experts, 2*I, H)
-         experts.down_proj:    Parameter (num_experts, H, I)
-       gate is rows [0:I], up is rows [I:2*I] of gate_up_proj[expert_idx].
-
-    2. UNFUSED layout (ModuleList of OlmoeMLP, slow loader path):
-         experts[i].gate_proj: nn.Linear with weight (I, H)
-         experts[i].up_proj:   nn.Linear with weight (I, H)
-         experts[i].down_proj: nn.Linear with weight (H, I)
-
-    The two layouts arise depending on whether transformers loads via
-    the per-tensor path (TTY-attached) or the safetensors-shard path
-    (detached/headless invocation). The choice happens silently in
-    transformers 5.x and we have to handle both.
+    For gate_proj/up_proj: a slice of gate_up_proj[expert_idx].
+      gate_up_proj has shape (E, 2*I, H). gate is rows [0:I], up is rows [I:2I].
+      Each "logical Linear" has shape (I, H) used as F.linear weight.
+    For down_proj: gate_up_proj[expert_idx] is shape (H, I).
     """
     experts = model.model.layers[layer_idx].mlp.experts
     cfg = model.config
     H = cfg.hidden_size
     I = cfg.intermediate_size
 
-    is_fused = hasattr(experts, "gate_up_proj") and isinstance(
-        getattr(experts, "gate_up_proj", None), torch.nn.Parameter
-    )
-
     if proj in ("gate_proj", "up_proj"):
+        offset = 0 if proj == "gate_proj" else I
         out_features = I
         in_features = H
 
-        if is_fused:
-            offset = 0 if proj == "gate_proj" else I
+        def get():
+            return experts.gate_up_proj[expert_idx, offset:offset + I, :].detach().clone()
 
-            def get():
-                return experts.gate_up_proj[expert_idx, offset:offset + I, :].detach().clone()
-
-            def set_(w):
-                with torch.no_grad():
-                    experts.gate_up_proj[expert_idx, offset:offset + I, :].copy_(
-                        w.to(experts.gate_up_proj.dtype).to(experts.gate_up_proj.device)
-                    )
-        else:
-            # Unfused: experts[expert_idx].gate_proj or .up_proj is an nn.Linear
-            linear_attr = proj  # 'gate_proj' or 'up_proj'
-
-            def get():
-                lin = getattr(experts[expert_idx], linear_attr)
-                return lin.weight.detach().clone()
-
-            def set_(w):
-                lin = getattr(experts[expert_idx], linear_attr)
-                with torch.no_grad():
-                    lin.weight.copy_(w.to(lin.weight.dtype).to(lin.weight.device))
-
+        def set_(w):
+            with torch.no_grad():
+                experts.gate_up_proj[expert_idx, offset:offset + I, :].copy_(
+                    w.to(experts.gate_up_proj.dtype).to(experts.gate_up_proj.device)
+                )
     elif proj == "down_proj":
         out_features = H
         in_features = I
 
-        if is_fused:
-            def get():
-                return experts.down_proj[expert_idx].detach().clone()
+        def get():
+            return experts.down_proj[expert_idx].detach().clone()
 
-            def set_(w):
-                with torch.no_grad():
-                    experts.down_proj[expert_idx].copy_(
-                        w.to(experts.down_proj.dtype).to(experts.down_proj.device)
-                    )
-        else:
-            def get():
-                lin = experts[expert_idx].down_proj
-                return lin.weight.detach().clone()
-
-            def set_(w):
-                lin = experts[expert_idx].down_proj
-                with torch.no_grad():
-                    lin.weight.copy_(w.to(lin.weight.dtype).to(lin.weight.device))
+        def set_(w):
+            with torch.no_grad():
+                experts.down_proj[expert_idx].copy_(
+                    w.to(experts.down_proj.dtype).to(experts.down_proj.device)
+                )
     else:
         raise ValueError(f"Unknown expert proj: {proj}")
 
@@ -172,8 +131,6 @@ def _make_expert_target(model, layer_idx, expert_idx, proj):
         get_weight=get,
         set_weight=set_,
     )
-
-
 
 
 def enumerate_quant_targets(model) -> Iterator[QuantTarget]:
