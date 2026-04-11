@@ -1,17 +1,13 @@
 """A.11 v2 — compute TOKEN-WEIGHTED per-layer mean Hessians.
 
 For each layer L, compute:
-  H_layer_weighted = (Σ_e n_e · H_e) / (Σ_e n_e)
+  H_layer_weighted = (Sum_e n_e * H_e) / (Sum_e n_e)
 
 where H_e is the per-expert Hessian (already normalized as X_e^T X_e / n_e
 during collection) and n_e is the per-expert token count.
 
-Mathematically equivalent to (Σ_e X_e^T X_e) / (Σ_e n_e), i.e. the Hessian
+Mathematically equivalent to (Sum_e X_e^T X_e) / (Sum_e n_e), i.e. the Hessian
 you'd compute by ignoring routing and treating all calibration tokens uniformly.
-
-This is a stronger baseline than the unweighted mean (compute_per_layer_mean_H.py)
-because it matches what existing per-layer methods (MoEQuant, MoPEQ, EAQuant)
-implicitly compute when collecting Hessians without routing partition.
 """
 import os
 import torch
@@ -46,8 +42,6 @@ def compute_layer_weighted_mean(layer_idx):
         n_gu = gu["n_tokens"]
         n_dn = dn["n_tokens"]
 
-        # H_e is stored as (X_e^T X_e) / n_e. Multiply by n_e to recover
-        # the raw outer-product sum, then accumulate.
         weighted_gu = gu["H"].double() * n_gu
         weighted_dn = dn["H"].double() * n_dn
 
@@ -61,11 +55,9 @@ def compute_layer_weighted_mean(layer_idx):
         total_n_gu += n_gu
         total_n_dn += n_dn
 
-    # Normalize by total token counts
     H_gate_up = (H_gate_up_sum / total_n_gu).float()
     H_down = (H_down_sum / total_n_dn).float()
 
-    # Symmetrize for fp accumulation drift
     H_gate_up = 0.5 * (H_gate_up + H_gate_up.T)
     H_down = 0.5 * (H_down + H_down.T)
 
