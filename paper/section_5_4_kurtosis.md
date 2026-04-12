@@ -15,7 +15,7 @@ Trellis-coded quantization with the QTIP HYB codebook is designed for inputs tha
 | Std across tensors | 1.67 | **0.014** |
 | Range | [3.00, 44.15] | [2.99, 3.70] |
 
-Post-RHT, the mean kurtosis across all 3072 expert weight matrices is **3.004** — essentially exactly Gaussian (3.000) to three decimal places. The standard deviation across tensors drops from 1.67 (pre-RHT) to 0.01 (post-RHT), indicating that RHT produces near-perfect distributional uniformity: every expert weight matrix in the model, regardless of layer, expert index, or projection, is mapped to a distribution numerically indistinguishable from i.i.d. Gaussian.
+Post-RHT, the mean kurtosis across all 3072 expert weight matrices is **3.004** — essentially exactly Gaussian (3.000) to three decimal places. The standard deviation across tensors drops from 1.67 (pre-RHT) to 0.014 (post-RHT), indicating that RHT produces near-perfect distributional uniformity: every expert weight matrix in the model, regardless of layer, expert index, or projection, is mapped to a distribution numerically indistinguishable from i.i.d. Gaussian.
 
 Per-projection breakdown shows the same pattern across all three projection types: gate_proj (mean 3.007, median 3.005), up_proj (mean 3.002, median 3.002), and down_proj (mean 3.003, median 3.003). The single outlier above 3.1 in the entire 3072-matrix population is a gate_proj matrix with post-RHT kurtosis 3.70 — still within 25% of Gaussian and far below the pre-RHT maximum of 44.15.
 
