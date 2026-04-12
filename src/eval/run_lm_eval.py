@@ -22,6 +22,7 @@ CONFIG_TO_QUANT_DIR = {
     "fp16":         None,
     "per_expert":   "cache/quantized",
     "per_layer_H":  "cache/quantized_per_layer_H",
+    "per_layer_weighted_H": "cache/quantized_per_layer_weighted_H"
 }
 
 

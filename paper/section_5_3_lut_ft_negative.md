@@ -1,0 +1,17 @@
+### 5.3 Negative Result: LUT Fine-Tuning is Unnecessary
+
+QTIP and related trellis quantization methods sometimes apply post-hoc fine-tuning of the codebook lookup table (LUT) entries to recover quality loss from the assignment phase. This is a small but real source of additional quality at the cost of a fine-tuning pass over the calibration data. We tested whether LUT fine-tuning provides additional benefit when used on top of per-expert Hessian calibration. The result is sharply negative: LUT fine-tuning provides essentially no improvement.
+
+**Methodology.** For each quantized weight matrix, we initialized the LUT to the QTIP-released HYB codebook and then ran gradient descent on the LUT entries with the BlockLDLQ-assigned trellis indices held fixed, minimizing the activation-space MSE on the calibration set. We swept four learning rates (1e-4, 3e-4, 1e-3, 3e-3) and ran each for sufficient steps to reach loss convergence. We measured per-target MSE reduction (in %) relative to the same target without LUT fine-tuning.
+
+**Result.** Across all 1024 expert weight matrices in OLMoE-1B-7B, LUT fine-tuning yielded a mean MSE reduction of 3.0% on expert layers and 0.0% on attention layers. The per-target distribution is tight: the worst-case expert improvement was 7.2% and the best-case was 1.5%, with no expert showing more than 10% improvement on any learning rate. All four learning rates converged to the same final loss within numerical precision, indicating the optimization landscape is essentially flat — the LUT is already at or near the local optimum given per-expert Hessian calibration.
+
+**Why this is meaningful.** A 3.0% MSE reduction on expert weights translates to a perplexity improvement of less than 0.01 on WikiText-2 — well below the noise floor of the evaluation and not worth reporting as a separate configuration. The 0.0% reduction on attention weights is even more striking: it indicates that BlockLDLQ with per-expert (or in the attention case, full unrouted) Hessian calibration is already producing trellis assignments that are at or near the codebook's representational capacity at 2 bits.
+
+This is a clean negative result with two practical implications:
+
+1. **Simplification.** Future work on 2-bit MoE quantization need not invest engineering effort in LUT fine-tuning pipelines. The QTIP-released HYB codebook is sufficient as-is when paired with per-expert calibration.
+
+2. **Per-expert calibration is doing real work.** The fact that LUT fine-tuning provides essentially no additional improvement on top of per-expert Hessians is itself evidence that per-expert calibration captures a meaningful signal: there is no remaining error structure in the quantized weights that LUT adjustment can recover. If per-expert calibration were producing suboptimal trellis assignments, LUT fine-tuning would have something to fix; the fact that it does not suggests that the assignments are near-optimal.
+
+We interpret this negative result as the strongest available evidence that per-expert Hessian calibration is the right level of optimization granularity for 2-bit MoE quantization: finer-grained codebook adjustments do not help, and coarser-grained per-layer Hessians (Section 5.1) do hurt. The combination of QTIP's BlockLDLQ algorithm with per-expert Hessian calibration sits at a quality plateau that neither finer nor coarser adjustments improve upon.

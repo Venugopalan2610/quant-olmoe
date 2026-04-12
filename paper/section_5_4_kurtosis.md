@@ -2,7 +2,7 @@
 
 Trellis-coded quantization with the QTIP HYB codebook is designed for inputs that are approximately i.i.d. Gaussian. The quality of TCQ-based quantization depends on how close the actual weight distribution is to a Gaussian source: the closer the match, the closer the achievable distortion is to the rate-distortion lower bound for that bitrate. In this section we measure how close OLMoE's expert weights are to Gaussian *after* the RHT preprocessing step described in Section 3.3, and show that the match is essentially exact.
 
-**Methodology.** For each of the 3072 expert weight matrices in OLMoE-1B-7B-0125 (16 layers x 64 experts x 3 projections [gate_proj, up_proj, down_proj]), we loaded the fp32 weights, applied the same random Hadamard transform used in the quantization pipeline (Section 3.3) with deterministic per-target random sign vectors, and computed the excess kurtosis (Pearson definition, Gaussian = 3.0) of the flattened transformed weights. We also measured the pre-RHT kurtosis for comparison.
+**Methodology.** For each of the 3072 expert weight matrices in OLMoE-1B-7B-0125 (16 layers x 64 experts x 3 projections [gate_proj, up_proj, down_proj]), we loaded the fp32 weights, applied the same random Hadamard transform used in the quantization pipeline (Section 3.3) with deterministic per-target random sign vectors, and computed the kurtosis (Pearson definition, Gaussian = 3.0) of the flattened transformed weights. We also measured the pre-RHT kurtosis for comparison.
 
 **Result.** The aggregate statistics across all 3072 expert weight matrices are summarized in Table 3.
 
@@ -12,7 +12,7 @@ Trellis-coded quantization with the QTIP HYB codebook is designed for inputs tha
 |---|---|---|
 | Mean | 3.467 | **3.004** |
 | Median | 3.178 | **3.003** |
-| Std across tensors | 1.67 | **0.01** |
+| Std across tensors | 1.67 | **0.014** |
 | Range | [3.00, 44.15] | [2.99, 3.70] |
 
 Post-RHT, the mean kurtosis across all 3072 expert weight matrices is **3.004** — essentially exactly Gaussian (3.000) to three decimal places. The standard deviation across tensors drops from 1.67 (pre-RHT) to 0.01 (post-RHT), indicating that RHT produces near-perfect distributional uniformity: every expert weight matrix in the model, regardless of layer, expert index, or projection, is mapped to a distribution numerically indistinguishable from i.i.d. Gaussian.
