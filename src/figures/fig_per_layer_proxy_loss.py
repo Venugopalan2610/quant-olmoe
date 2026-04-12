@@ -37,22 +37,18 @@ def aggregate_layer_proxy(quant_dir, layer):
     layer_dir = os.path.join(quant_dir, f"L{layer:02d}")
     if not os.path.isdir(layer_dir):
         return None
-    proxies = []
-    for fname in sorted(os.listdir(layer_dir)):
-        if not fname.startswith("expert_") or not fname.endswith(".pt"):
-            continue
-        path = os.path.join(layer_dir, fname)
-        try:
-            d = torch.load(path, weights_only=False)
-        except Exception:
-            continue
-        meta = d.get("meta", {}) if isinstance(d, dict) else {}
-        pl = meta.get("proxy_loss", None)
-        if pl is None and isinstance(d, dict):
-            pl = d.get("proxy_loss", None)
-        if pl is not None:
-            proxies.append(float(pl))
-    return np.mean(proxies) if proxies else None
+
+    STATS_FILES = {
+        "per-expert H (ours)":          "cache/quantized/aggregate_stats.pt",
+        "per-layer H, unweighted":       "cache/quantized_per_layer_H/ablation_stats.pt",
+        "per-layer H, token-weighted":   "cache/quantized_per_layer_weighted_H/ablation_stats.pt",
+    }
+
+    data = {}
+    for label, path in STATS_FILES.items():
+        d = torch.load(path, weights_only=False)
+        data[label] = np.array(d["layer_aggregate_proxy"])
+        print(f"  {label}: {data[label].mean():.4e} overall mean")
 
 
 def main():

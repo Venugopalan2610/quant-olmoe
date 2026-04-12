@@ -60,7 +60,7 @@ def main():
     ax.set_ylabel("Tokens routed to expert (log scale)")
     ax.set_title("Per-expert token count range across 16 layers")
     ax.set_xticks(layers)
-    ax.legend(fontsize=8, loc="lower right")
+    ax.legend(fontsize=8, loc="upper right", bbox_to_anchor=(1.0, 0.55))
     ax.grid(True, alpha=0.3, which="both")
 
     # Right panel: max/min ratio per layer (the imbalance metric)
@@ -70,7 +70,7 @@ def main():
                label=f"mean = {ratios.mean():.2f}x")
     ax.set_xlabel("Layer index")
     ax.set_ylabel("max / min token count ratio")
-    ax.set_title("Routing imbalance grows with depth")
+    ax.set_title("Per-layer routing imbalance (max/min token ratio)")
     ax.set_xticks(layers)
     ax.legend(fontsize=9, loc="upper left")
     ax.grid(True, alpha=0.3, axis="y")

@@ -28,24 +28,24 @@ def main():
 
     # Left panel: pre-RHT distribution (log-x because it has heavy tail up to 44)
     ax = axes[0]
-    ax.hist(kurt_pre, bins=60, color="#888888", edgecolor="black", linewidth=0.3)
+    ax.hist(kurt_pre, bins=120, color="#888888", edgecolor="black", linewidth=0.3)
     ax.axvline(3.0, color="red", linestyle="--", linewidth=1.5, label="Gaussian (3.0)")
     ax.axvline(kurt_pre.mean(), color="blue", linestyle="-", linewidth=1.5,
                label=f"mean ({kurt_pre.mean():.3f})")
-    ax.set_xlabel("Excess kurtosis")
+    ax.set_xlabel("Kurtosis (Pearson's)")
     ax.set_ylabel("Number of expert weight matrices")
     ax.set_title(f"Pre-RHT (n={len(kurt_pre)})")
-    ax.set_xlim(2.5, min(kurt_pre.max() * 1.05, 15))
+    ax.set_xlim(2.9, 5.0)
     ax.legend(fontsize=9, loc="upper right")
     ax.grid(True, alpha=0.3)
 
     # Right panel: post-RHT distribution (tight x-axis because std is 0.01)
     ax = axes[1]
-    ax.hist(kurt_post, bins=60, color="#4a90d9", edgecolor="black", linewidth=0.3)
+    ax.hist(kurt_post, bins=120, color="#4a90d9", edgecolor="black", linewidth=0.3)
     ax.axvline(3.0, color="red", linestyle="--", linewidth=1.5, label="Gaussian (3.0)")
     ax.axvline(kurt_post.mean(), color="blue", linestyle="-", linewidth=1.5,
                label=f"mean ({kurt_post.mean():.3f})")
-    ax.set_xlabel("Excess kurtosis")
+    ax.set_xlabel("Kurtosis (Pearson's)")
     ax.set_ylabel("Number of expert weight matrices")
     ax.set_title(f"Post-RHT (n={len(kurt_post)})")
     # Tight range showing essentially Gaussian; clip the single outlier at ~3.70
