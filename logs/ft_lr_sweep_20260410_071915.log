@@ -1,45 +1,0 @@
-Loading model...
-Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<01:23,  2.14it/s]Loading weights:   2%|▏         | 4/179 [00:01<01:19,  2.20it/s]Loading weights:   3%|▎         | 5/179 [00:02<01:31,  1.91it/s]Loading weights:   8%|▊         | 15/179 [00:02<00:22,  7.26it/s]Loading weights:   9%|▉         | 17/179 [00:03<00:28,  5.75it/s]Loading weights:  15%|█▍        | 26/179 [00:04<00:19,  7.85it/s]Loading weights:  15%|█▌        | 27/179 [00:06<00:44,  3.40it/s]Loading weights:  21%|██        | 37/179 [00:06<00:20,  6.88it/s]Loading weights:  22%|██▏       | 40/179 [00:17<01:50,  1.26it/s]Loading weights:  27%|██▋       | 48/179 [00:23<01:37,  1.35it/s]Loading weights:  28%|██▊       | 50/179 [00:41<03:59,  1.86s/it]Loading weights:  33%|███▎      | 59/179 [00:45<02:23,  1.20s/it]Loading weights:  34%|███▍      | 61/179 [01:03<04:15,  2.17s/it]Loading weights:  39%|███▉      | 70/179 [01:07<02:34,  1.42s/it]Loading weights:  40%|████      | 72/179 [01:18<03:26,  1.93s/it]Loading weights:  45%|████▌     | 81/179 [01:20<01:51,  1.14s/it]Loading weights:  46%|████▌     | 82/179 [01:26<02:21,  1.46s/it]Loading weights:  51%|█████▏    | 92/179 [01:27<01:10,  1.23it/s]Loading weights:  52%|█████▏    | 93/179 [01:31<01:28,  1.03s/it]Loading weights:  58%|█████▊    | 103/179 [01:32<00:43,  1.74it/s]Loading weights:  58%|█████▊    | 104/179 [01:37<01:03,  1.17it/s]Loading weights:  64%|██████▎   | 114/179 [01:38<00:32,  2.01it/s]Loading weights:  64%|██████▍   | 115/179 [01:43<00:52,  1.21it/s]Loading weights:  70%|██████▉   | 125/179 [01:45<00:27,  1.95it/s]Loading weights:  70%|███████   | 126/179 [01:49<00:39,  1.33it/s]Loading weights:  76%|███████▌  | 136/179 [01:50<00:17,  2.48it/s]Loading weights:  77%|███████▋  | 138/179 [01:52<00:19,  2.06it/s]Loading weights:  78%|███████▊  | 140/179 [01:52<00:17,  2.22it/s]Loading weights:  82%|████████▏ | 147/179 [01:54<00:12,  2.62it/s]Loading weights:  83%|████████▎ | 148/179 [02:02<00:29,  1.04it/s]Loading weights:  88%|████████▊ | 158/179 [02:04<00:11,  1.76it/s]Loading weights:  89%|████████▉ | 159/179 [02:10<00:19,  1.05it/s]Loading weights:  94%|█████████▍| 169/179 [02:13<00:05,  1.69it/s]Loading weights:  95%|█████████▍| 170/179 [02:18<00:08,  1.07it/s]Loading weights: 100%|██████████| 179/179 [02:18<00:00,  1.29it/s]
-Collecting activations for layer 8...
-    all experts saturated at shard 8/256
-    collected in 8.8s — counts: min=1024 max=1024 mean=1024
-
-X stats: shape=torch.Size([1024, 2048]) mean=-0.0000 std=0.5263 max=8.9351
-Y stats: shape=torch.Size([1024, 2048]) mean=-0.0003 std=0.0630 max=1.1263
-||Y||²/n = 3.9726e-03 (loss floor if W_q == 0)
-
-=== lr=0.0005 ===
-      step    0: loss=4.858738e-04
-      step  100: loss=4.748406e-04
-      step  200: loss=4.734566e-04
-      step  300: loss=4.731371e-04
-      step  400: loss=4.730348e-04
-      step  499: loss=4.729930e-04
-  loss: 4.8587e-04 -> 4.7299e-04  (2.7%)  21s
-
-=== lr=0.002 ===
-      step    0: loss=4.858738e-04
-      step  100: loss=4.730160e-04
-      step  200: loss=4.729587e-04
-      step  300: loss=4.729570e-04
-      step  400: loss=4.729570e-04
-      step  499: loss=4.729570e-04
-  loss: 4.8587e-04 -> 4.7296e-04  (2.7%)  17s
-
-=== lr=0.01 ===
-      step    0: loss=4.858738e-04
-      step  100: loss=4.729571e-04
-      step  200: loss=4.729570e-04
-      step  300: loss=4.729570e-04
-      step  400: loss=4.729570e-04
-      step  499: loss=4.729569e-04
-  loss: 4.8587e-04 -> 4.7296e-04  (2.7%)  19s
-
-=== lr=0.05 ===
-      step    0: loss=4.858738e-04
-      step  100: loss=4.729573e-04
-      step  200: loss=4.729570e-04
-      step  300: loss=4.729570e-04
-      step  400: loss=4.729570e-04
-      step  499: loss=4.729570e-04
-  loss: 4.8587e-04 -> 4.7296e-04  (2.7%)  17s

@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this software or the accompanying paper, please cite the following."
+title: "qtip-olmoe: 2-Bit MoE Quantization on Consumer GPUs via Per-Expert Hessian Calibration"
+abstract: >-
+  A 2-bit weight-only quantization pipeline for the OLMoE-1B-7B
+  mixture-of-experts model, combining per-expert routing-conditioned
+  Hessian calibration with QTIP-style trellis-coded quantization.
+  Runs end-to-end on a single consumer GPU with 12 GB of VRAM.
+type: software
+authors:
+  - family-names: Iyengar
+    given-names: Venugopalan
+version: "0.1.0"
+date-released: "2026-04-13"
+license: Apache-2.0
+repository-code: "https://github.com/TODO-USER/qtip-olmoe"
+keywords:
+  - quantization
+  - mixture-of-experts
+  - olmoe
+  - post-training-quantization
+  - trellis-coded-quantization
+  - consumer-gpu
+preferred-citation:
+  type: article
+  title: "2-Bit MoE Quantization on Consumer GPUs via Per-Expert Hessian Calibration"
+  authors:
+    - family-names: Iyengar
+      given-names: Venugopalan
+  year: 2026
+  month: 4
+  journal: "arXiv preprint"
+  url: "https://github.com/TODO-USER/qtip-olmoe"
+references:
+  - type: conference-paper
+    title: "QTIP: Quantization with Trellises and Incoherence Processing"
+    authors:
+      - family-names: Tseng
+        given-names: Albert
+      - family-names: Yao
+        given-names: Qingyao
+      - family-names: Kuleshov
+        given-names: Volodymyr
+      - family-names: De Sa
+        given-names: Christopher
+    year: 2024
+    collection-title: "Advances in Neural Information Processing Systems"
+    url: "https://arxiv.org/abs/2406.11235"

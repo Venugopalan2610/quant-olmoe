@@ -1,8 +1,8 @@
 """Reference implementations of the three QTIP code functions.
 
-These are pure-Python references — slow but readable. The CUDA kernels in
-external/qtip/qtip-kernels are bit-equivalent to these (modulo any kernel
-bugs); these are the ground truth for testing.
+Pure-Python, slow but readable. Used as the ground truth for testing
+the CUDA implementations in src/cuda/ and src/viterbi/. Algorithms are
+from the QTIP paper (Tseng et al., NeurIPS 2024).
 
 All three take an L-bit state (as a uint32 with only the bottom L bits live)
 and produce one or two approximately N(0,1) floats.

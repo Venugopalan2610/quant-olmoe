@@ -1,29 +1,0 @@
-============================================================
-lm-eval run: config=per_expert
-  tasks: ['wikitext', 'hellaswag', 'arc_challenge', 'arc_easy', 'piqa']
-  num_fewshot: 0
-  batch_size: auto:4
-============================================================
-
-[1/4] Loading OLMoE in bf16 on GPU...
-Loading checkpoint shards:   0%|          | 0/6 [00:00<?, ?it/s]Loading checkpoint shards:  17%|█▋        | 1/6 [00:05<00:28,  5.74s/it]Loading checkpoint shards:  33%|███▎      | 2/6 [00:11<00:22,  5.58s/it]Loading checkpoint shards:  50%|█████     | 3/6 [00:18<00:18,  6.32s/it]Loading checkpoint shards:  67%|██████▋   | 4/6 [00:27<00:14,  7.32s/it]Loading checkpoint shards:  83%|████████▎ | 5/6 [00:38<00:08,  8.73s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:51<00:00, 10.18s/it]Loading checkpoint shards: 100%|██████████| 6/6 [00:51<00:00,  8.58s/it]
-  loaded in 53s
-
-[2/4] Installing 2-bit quantized weights from cache/quantized...
-Installing 3136 quantized targets from cache/quantized
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/hungryeagle/qtip-olmoe/src/eval/run_lm_eval.py", line 161, in <module>
-    main()
-  File "/home/hungryeagle/qtip-olmoe/src/eval/run_lm_eval.py", line 71, in main
-    install_stats = install_quantized_weights(model, quant_dir=quant_dir, verbose=True)
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/hungryeagle/qtip-olmoe/src/eval/install_quantized.py", line 78, in install_quantized_weights
-    target.set_weight(Wh_torch)
-  File "/home/hungryeagle/qtip-olmoe/src/models/olmoe_adapter.py", line 105, in set_
-    experts.gate_up_proj[expert_idx, offset:offset + I, :].copy_(
-    ^^^^^^^^^^^^^^^^^^^^
-  File "/home/hungryeagle/qtip-olmoe/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1729, in __getattr__
-    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
-AttributeError: 'ModuleList' object has no attribute 'gate_up_proj'

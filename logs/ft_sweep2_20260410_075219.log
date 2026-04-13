@@ -1,54 +1,0 @@
-Loading model...
-Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<02:24,  1.23it/s]Loading weights:   2%|▏         | 4/179 [00:02<01:37,  1.80it/s]Loading weights:   3%|▎         | 5/179 [00:02<01:26,  2.02it/s]Loading weights:   8%|▊         | 15/179 [00:03<00:32,  5.05it/s]Loading weights:   9%|▉         | 16/179 [00:04<00:34,  4.71it/s]Loading weights:  15%|█▍        | 26/179 [00:05<00:24,  6.12it/s]Loading weights:  15%|█▌        | 27/179 [00:05<00:26,  5.69it/s]Loading weights:  21%|██        | 37/179 [00:07<00:22,  6.34it/s]Loading weights:  21%|██        | 38/179 [00:08<00:35,  3.95it/s]Loading weights:  27%|██▋       | 48/179 [00:11<00:31,  4.13it/s]Loading weights:  27%|██▋       | 49/179 [00:20<01:47,  1.21it/s]Loading weights:  33%|███▎      | 59/179 [00:21<01:00,  1.99it/s]Loading weights:  34%|███▎      | 60/179 [00:26<01:34,  1.26it/s]Loading weights:  39%|███▉      | 70/179 [00:27<00:48,  2.24it/s]Loading weights:  40%|███▉      | 71/179 [00:45<02:47,  1.56s/it]Loading weights:  45%|████▌     | 81/179 [00:48<01:34,  1.03it/s]Loading weights:  46%|████▌     | 82/179 [01:17<04:28,  2.77s/it]Loading weights:  51%|█████▏    | 92/179 [01:20<02:17,  1.58s/it]Loading weights:  52%|█████▏    | 93/179 [01:37<03:41,  2.57s/it]Loading weights:  58%|█████▊    | 103/179 [01:40<01:54,  1.51s/it]Loading weights:  58%|█████▊    | 104/179 [01:52<02:43,  2.18s/it]Loading weights:  64%|██████▎   | 114/179 [01:52<01:14,  1.15s/it]Loading weights:  65%|██████▍   | 116/179 [02:04<01:47,  1.71s/it]Loading weights:  70%|██████▉   | 125/179 [02:04<00:52,  1.03it/s]Loading weights:  72%|███████▏  | 129/179 [02:15<01:07,  1.34s/it]Loading weights:  76%|███████▌  | 136/179 [02:19<00:45,  1.07s/it]Loading weights:  76%|███████▌  | 136/179 [02:29<00:45,  1.07s/it]Loading weights:  77%|███████▋  | 137/179 [02:51<02:12,  3.15s/it]Loading weights:  82%|████████▏ | 147/179 [02:52<00:52,  1.64s/it]Loading weights:  84%|████████▍ | 150/179 [02:56<00:46,  1.59s/it]Loading weights:  88%|████████▊ | 158/179 [02:56<00:20,  1.03it/s]Loading weights:  90%|████████▉ | 161/179 [03:02<00:20,  1.14s/it]Loading weights:  94%|█████████▍| 169/179 [03:02<00:06,  1.44it/s]Loading weights:  96%|█████████▌| 171/179 [03:05<00:06,  1.26it/s]Loading weights: 100%|██████████| 179/179 [03:05<00:00,  1.04s/it]
-Collecting activations for layer 8...
-    all experts saturated at shard 8/256
-    collected in 5.3s — counts: min=1024 max=1024 mean=1024
-
-X stats: shape=torch.Size([1024, 2048]) mean=-0.0001 std=0.5266 max=8.9351
-Y stats: shape=torch.Size([1024, 2048]) mean=-0.0003 std=0.0629 max=1.1263
-||Y||²/n = 3.9592e-03 (loss floor if W_q == 0)
-
-=== lr=0.0005 ===
-      step    0: loss=4.857188e-04
-      step  100: loss=4.750087e-04
-      step  200: loss=4.736790e-04
-      step  300: loss=4.733664e-04
-      step  400: loss=4.732624e-04
-      step  499: loss=4.732185e-04
-  loss: 4.8572e-04 -> 4.7322e-04  (2.6%)  19s
-
-=== lr=0.002 ===
-      step    0: loss=4.857188e-04
-      step  100: loss=4.732431e-04
-      step  200: loss=4.731810e-04
-      step  300: loss=4.731789e-04
-      step  400: loss=4.731789e-04
-      step  499: loss=4.731789e-04
-  loss: 4.8572e-04 -> 4.7318e-04  (2.6%)  17s
-
-=== lr=0.01 ===
-      step    0: loss=4.857188e-04
-      step  100: loss=4.731790e-04
-      step  200: loss=4.731789e-04
-      step  300: loss=4.731789e-04
-      step  400: loss=4.731789e-04
-      step  499: loss=4.731789e-04
-  loss: 4.8572e-04 -> 4.7318e-04  (2.6%)  19s
-
-=== lr=0.05 ===
-      step    0: loss=4.857188e-04
-      step  100: loss=4.731791e-04
-      step  200: loss=4.731789e-04
-      step  300: loss=4.731789e-04
-      step  400: loss=4.731789e-04
-      step  499: loss=4.731789e-04
-  loss: 4.8572e-04 -> 4.7318e-04  (2.6%)  17s
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/hungryeagle/qtip-olmoe/src/tripwires/test_ft_lr_sweep.py", line 102, in <module>
-    main()
-  File "/home/hungryeagle/qtip-olmoe/src/tripwires/test_ft_lr_sweep.py", line 83, in main
-    with safe_open("cache/model/olmoe-1b-7b-0125/" + "model-00001-of-00001.safetensors", framework="numpy") as f:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: No such file or directory: cache/model/olmoe-1b-7b-0125/model-00001-of-00001.safetensors

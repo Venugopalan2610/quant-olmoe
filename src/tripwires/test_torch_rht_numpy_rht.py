@@ -1,3 +1,11 @@
+"""Tripwire: torch inverse RHT matches numpy inverse RHT (and backprops).
+
+Verifies that the CUDA/torch implementation of inverse_rht used inside
+LUT fine-tuning is bit-equivalent (to fp32 tolerance) to the numpy
+reference used during quantization, and that gradients flow through it.
+
+Run: python -m src.tripwires.test_torch_rht_numpy_rht
+"""
 import numpy as np
 import torch
 from src.rht.transform import apply_inverse_rht, make_sign_vector

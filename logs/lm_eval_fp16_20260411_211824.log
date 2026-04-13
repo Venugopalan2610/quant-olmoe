@@ -1,37 +1,0 @@
-============================================================
-lm-eval run: config=fp16
-  tasks: ['wikitext', 'hellaswag', 'arc_challenge', 'arc_easy', 'piqa']
-  num_fewshot: 0
-  batch_size: auto:4
-============================================================
-
-[1/4] Loading OLMoE in bf16 on GPU...
-Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<00:43,  4.09it/s]Loading weights:   2%|▏         | 4/179 [00:01<01:20,  2.16it/s]Loading weights:   8%|▊         | 15/179 [00:03<00:36,  4.44it/s]Loading weights:  15%|█▍        | 26/179 [00:05<00:29,  5.11it/s]Loading weights:  20%|█▉        | 35/179 [00:05<00:17,  8.01it/s]Loading weights:  20%|██        | 36/179 [00:06<00:24,  5.85it/s]
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/home/hungryeagle/qtip-olmoe/src/eval/run_lm_eval.py", line 161, in <module>
-    main()
-  File "/home/hungryeagle/qtip-olmoe/src/eval/run_lm_eval.py", line 55, in main
-    model = OlmoeForCausalLM.from_pretrained(
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/hungryeagle/.local/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4137, in from_pretrained
-    loading_info, disk_offload_index = cls._load_pretrained_model(model, state_dict, checkpoint_files, load_config)
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/hungryeagle/.local/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4256, in _load_pretrained_model
-    loading_info, disk_offload_index = convert_and_load_state_dict_in_model(
-                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/hungryeagle/.local/lib/python3.12/site-packages/transformers/core_model_loading.py", line 1212, in convert_and_load_state_dict_in_model
-    realized_value = mapping.convert(
-                     ^^^^^^^^^^^^^^^^
-  File "/home/hungryeagle/.local/lib/python3.12/site-packages/transformers/core_model_loading.py", line 734, in convert
-    collected_tensors = self.materialize_tensors()
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/hungryeagle/.local/lib/python3.12/site-packages/transformers/core_model_loading.py", line 654, in materialize_tensors
-    tensors = [future.result() for future in tensors if future.result() is not None]
-                                                        ^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 451, in result
-    self._condition.wait(timeout)
-  File "/usr/lib/python3.12/threading.py", line 355, in wait
-    waiter.acquire()
-KeyboardInterrupt

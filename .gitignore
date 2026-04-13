@@ -1,14 +1,37 @@
+# Large/ephemeral artifacts produced by the pipeline
 cache/
 results/
 plots/
-*.pyc
-__pycache__/
-.venv/
-.pytest_cache/
-.ipynb_checkpoints/
+logs/
+
+# Model/checkpoint binaries (hosted on HF, not in git)
 *.pt
 *.bin
 *.safetensors
 *.gguf
+
+# Logs
+*.log
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtualenvs and env files
+.venv/
+venv/
+.env
+.envrc
+
+# Editor / OS metadata
+.vscode/
+.idea/
+*.swp
+.DS_Store
+*:Zone.Identifier
+
+# Local source builds (installed via pip install .)
 fast-hadamard-transform/
-external/qtip/

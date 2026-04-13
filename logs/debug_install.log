@@ -1,14 +1,0 @@
-Loading model...
-Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<00:54,  3.26it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:34,  5.14it/s]Loading weights:   8%|▊         | 15/179 [00:01<00:14, 11.05it/s]Loading weights:  15%|█▍        | 26/179 [00:02<00:12, 12.71it/s]Loading weights:  21%|██        | 37/179 [00:02<00:10, 14.03it/s]Loading weights:  27%|██▋       | 48/179 [00:06<00:21,  6.09it/s]Loading weights:  33%|███▎      | 59/179 [00:07<00:16,  7.37it/s]Loading weights:  39%|███▉      | 70/179 [00:08<00:12,  8.85it/s]Loading weights:  45%|████▌     | 81/179 [00:10<00:13,  7.52it/s]Loading weights:  48%|████▊     | 86/179 [00:10<00:10,  8.71it/s]Loading weights:  51%|█████▏    | 92/179 [00:10<00:10,  8.42it/s]Loading weights:  58%|█████▊    | 103/179 [00:12<00:10,  6.98it/s]Loading weights:  64%|██████▎   | 114/179 [00:16<00:13,  4.99it/s]Loading weights:  66%|██████▋   | 119/179 [00:16<00:10,  5.74it/s]Loading weights:  69%|██████▊   | 123/179 [00:17<00:09,  5.98it/s]Loading weights:  70%|██████▉   | 125/179 [00:19<00:15,  3.44it/s]Loading weights:  70%|███████   | 126/179 [00:20<00:15,  3.31it/s]Loading weights:  76%|███████▌  | 136/179 [00:23<00:13,  3.12it/s]Loading weights:  77%|███████▋  | 137/179 [00:25<00:17,  2.43it/s]Loading weights:  82%|████████▏ | 146/179 [00:25<00:07,  4.38it/s]Loading weights:  83%|████████▎ | 148/179 [00:31<00:19,  1.61it/s]Loading weights:  88%|████████▊ | 158/179 [00:37<00:12,  1.66it/s]Loading weights:  89%|████████▉ | 160/179 [00:42<00:15,  1.23it/s]Loading weights:  93%|█████████▎| 167/179 [00:42<00:06,  1.95it/s]Loading weights:  95%|█████████▍| 170/179 [00:45<00:05,  1.63it/s]Loading weights:  97%|█████████▋| 174/179 [00:47<00:02,  1.75it/s]Loading weights: 100%|██████████| 179/179 [00:47<00:00,  3.76it/s]
-Type check on layer 0:
-  experts type: OlmoeExperts
-  has gate_up_proj: True
-  gate_up_proj type: Parameter
-  gate_up_proj shape: torch.Size([64, 2048, 2048])
-Enumerating first few targets and checking set_weight works:
-  total targets: 3136
-  first 5: ['L00.attn.q_proj', 'L00.attn.k_proj', 'L00.attn.v_proj', 'L00.attn.o_proj', 'L00.E00.gate_proj']
-  payload shape: (1024, 2048)
-  dequantized shape: (1024, 2048), dtype: float64
-  target: L00.E00.gate_proj, in=2048, out=1024
-  SUCCESS: set_weight worked on L00.E00.gate_proj

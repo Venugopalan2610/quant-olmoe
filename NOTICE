@@ -1,0 +1,46 @@
+qtip-olmoe
+Copyright 2026 Venugopalan Iyengar
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this repository except in compliance with the License. A copy of
+the License is included in the LICENSE file at the root of this
+repository, and is also available at:
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Algorithmic attribution
+-----------------------
+
+This repository implements the trellis-coded quantization algorithms
+described in QTIP (Tseng et al., NeurIPS 2024), adapted to per-expert
+Hessian calibration for the OLMoE-1B-7B mixture-of-experts architecture.
+
+    QTIP paper:   https://arxiv.org/abs/2406.11235
+    QTIP code:    https://github.com/Cornell-RelaxML/qtip (GPL-3.0)
+
+The code under src/ (codebooks, Viterbi encoder, BlockLDLQ, CUDA
+kernels, OLMoE adapter, calibration pipeline, evaluation harness) is
+an independent clean-room implementation of the algorithms described
+in the QTIP paper. No source code from the upstream QTIP repository
+is used, linked, or redistributed here; the GPL-3.0 license of the
+upstream QTIP project therefore does not transitively apply to this
+work.
+
+Third-party components
+----------------------
+
+- fast-hadamard-transform (pip-installed from source):
+    BSD-3-Clause, Dao AI Lab
+    https://github.com/Dao-AILab/fast-hadamard-transform
+
+- OLMoE-1B-7B-0125 model weights (loaded via Hugging Face, not bundled):
+    Apache-2.0, Allen Institute for AI
+    https://huggingface.co/allenai/OLMoE-1B-7B-0125
+
+- C4 calibration data (loaded via Hugging Face, not bundled):
+    ODC-BY, AllenAI / Common Crawl
+    https://huggingface.co/datasets/allenai/c4
+
+- WikiText-2 evaluation data (loaded via Hugging Face, not bundled):
+    CC BY-SA 4.0, Salesforce Research
+    https://huggingface.co/datasets/wikitext

@@ -1,108 +1,0 @@
-Device: cuda
-Loading tokens...
-  tokens shape: (2048, 1024), dtype: int32
-Loading full model (bf16 CPU)...
-Loading weights:   0%|          | 0/179 [00:00<?, ?it/s]Loading weights:   1%|          | 1/179 [00:00<00:24,  7.30it/s]Loading weights:   2%|▏         | 4/179 [00:00<00:41,  4.23it/s]Loading weights:   3%|▎         | 5/179 [00:01<00:45,  3.86it/s]Loading weights:   8%|▊         | 15/179 [00:01<00:13, 11.72it/s]Loading weights:   9%|▉         | 17/179 [00:01<00:15, 10.32it/s]Loading weights:  15%|█▍        | 26/179 [00:02<00:10, 14.30it/s]Loading weights:  16%|█▌        | 28/179 [00:02<00:13, 11.60it/s]Loading weights:  21%|██        | 37/179 [00:03<00:09, 15.77it/s]Loading weights:  22%|██▏       | 39/179 [00:04<00:16,  8.33it/s]Loading weights:  27%|██▋       | 48/179 [00:04<00:12, 10.22it/s]Loading weights:  28%|██▊       | 50/179 [00:07<00:33,  3.87it/s]Loading weights:  34%|███▎      | 60/179 [00:13<00:49,  2.40it/s]Loading weights:  39%|███▉      | 70/179 [00:16<00:41,  2.63it/s]Loading weights:  40%|███▉      | 71/179 [00:21<01:05,  1.66it/s]Loading weights:  45%|████▌     | 81/179 [00:21<00:34,  2.81it/s]Loading weights:  46%|████▋     | 83/179 [00:23<00:38,  2.48it/s]Loading weights:  51%|█████▏    | 92/179 [00:23<00:21,  4.10it/s]Loading weights:  53%|█████▎    | 94/179 [00:24<00:23,  3.62it/s]Loading weights:  58%|█████▊    | 104/179 [00:28<00:27,  2.75it/s]Loading weights:  64%|██████▎   | 114/179 [00:29<00:14,  4.45it/s]Loading weights:  66%|██████▌   | 118/179 [00:35<00:30,  1.99it/s]Loading weights:  70%|██████▉   | 125/179 [00:37<00:22,  2.45it/s]Loading weights:  71%|███████   | 127/179 [00:45<00:43,  1.20it/s]Loading weights:  76%|███████▌  | 136/179 [00:46<00:23,  1.85it/s]Loading weights:  77%|███████▋  | 138/179 [00:57<00:45,  1.11s/it]Loading weights:  82%|████████▏ | 147/179 [00:58<00:21,  1.49it/s]Loading weights:  83%|████████▎ | 149/179 [01:01<00:23,  1.27it/s]Loading weights:  88%|████████▊ | 158/179 [01:02<00:09,  2.19it/s]Loading weights:  89%|████████▉ | 160/179 [01:05<00:11,  1.63it/s]Loading weights:  94%|█████████▍| 169/179 [01:05<00:03,  2.78it/s]Loading weights:  96%|█████████▌| 171/179 [01:07<00:03,  2.57it/s]Loading weights: 100%|██████████| 179/179 [01:07<00:00,  2.67it/s]
-  loaded in 70.6s
-  2048 seqs x 1024 tokens = 256 shards of B=8
-
-layer_00_input already complete (256 shards), skipping embed
-
-=== Layer 0 === SKIP (output complete: 256 shards)
-
-=== Layer 1 === SKIP (output complete: 256 shards)
-
-=== Layer 2 === SKIP (output complete: 256 shards)
-
-=== Layer 3 === SKIP (output complete: 256 shards)
-
-=== Layer 4 === SKIP (output complete: 256 shards)
-
-=== Layer 5 === SKIP (output complete: 256 shards)
-
-=== Layer 6 === SKIP (output complete: 256 shards)
-
-=== Layer 7 === SKIP (output complete: 256 shards)
-
-=== Layer 8 === SKIP (output complete: 256 shards)
-
-=== Layer 9 === SKIP (output complete: 256 shards)
-
-=== Layer 10 === SKIP (output complete: 256 shards)
-
-=== Layer 11 === SKIP (output complete: 256 shards)
-
-=== Layer 12 === SKIP (output complete: 256 shards)
-
-=== Layer 13 === resuming from shard 93/256
-    shard 97/256  elapsed 1.8s
-    shard 113/256  elapsed 5.4s
-    shard 129/256  elapsed 11.9s
-    shard 145/256  elapsed 17.9s
-    shard 161/256  elapsed 27.8s
-    shard 177/256  elapsed 34.7s
-    shard 193/256  elapsed 41.1s
-    shard 209/256  elapsed 47.0s
-    shard 225/256  elapsed 53.4s
-    shard 241/256  elapsed 61.2s
-    shard 256/256  elapsed 67.4s
-  layer 13 done in 68.5s
-
-=== Layer 14 === resuming from shard 0/256
-    shard 1/256  elapsed 0.3s
-    shard 17/256  elapsed 4.4s
-    shard 33/256  elapsed 9.1s
-    shard 49/256  elapsed 13.6s
-    shard 65/256  elapsed 18.2s
-    shard 81/256  elapsed 24.6s
-    shard 97/256  elapsed 29.3s
-    shard 113/256  elapsed 33.7s
-    shard 129/256  elapsed 38.5s
-    shard 145/256  elapsed 43.6s
-    shard 161/256  elapsed 47.9s
-    shard 177/256  elapsed 52.6s
-    shard 193/256  elapsed 59.2s
-    shard 209/256  elapsed 64.1s
-    shard 225/256  elapsed 68.9s
-    shard 241/256  elapsed 73.6s
-    shard 256/256  elapsed 78.4s
-  layer 14 done in 78.5s
-
-=== Layer 15 === resuming from shard 0/256
-    shard 1/256  elapsed 0.3s
-    shard 17/256  elapsed 5.4s
-    shard 33/256  elapsed 11.6s
-    shard 49/256  elapsed 17.9s
-    shard 65/256  elapsed 23.0s
-    shard 81/256  elapsed 27.8s
-    shard 97/256  elapsed 32.7s
-    shard 113/256  elapsed 37.4s
-    shard 129/256  elapsed 44.3s
-    shard 145/256  elapsed 49.0s
-    shard 161/256  elapsed 53.8s
-    shard 177/256  elapsed 58.7s
-    shard 193/256  elapsed 63.4s
-    shard 209/256  elapsed 68.4s
-    shard 225/256  elapsed 73.4s
-    shard 241/256  elapsed 79.9s
-    shard 256/256  elapsed 84.5s
-  layer 15 done in 84.6s
-
-=== All layers regenerated ===
-  layer_00_input: 256 shards
-  layer_01_input: 256 shards
-  layer_02_input: 256 shards
-  layer_03_input: 256 shards
-  layer_04_input: 256 shards
-  layer_05_input: 256 shards
-  layer_06_input: 256 shards
-  layer_07_input: 256 shards
-  layer_08_input: 256 shards
-  layer_09_input: 256 shards
-  layer_10_input: 256 shards
-  layer_11_input: 256 shards
-  layer_12_input: 256 shards
-  layer_13_input: 256 shards
-  layer_14_input: 256 shards
-  layer_15_input: 256 shards
-  layer_16_input: 256 shards
