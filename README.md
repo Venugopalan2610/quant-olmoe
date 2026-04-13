@@ -7,7 +7,7 @@ of trellis-coded quantization ([QTIP](https://arxiv.org/abs/2406.11235)).
 The full pipeline — per-expert Hessian collection, BlockLDLQ trellis
 quantization, two per-layer-H ablation baselines, and WikiText-2 / C4 /
 lm-eval-harness evaluation — runs end-to-end on a 12 GB consumer GPU in
-under 14 hours. Quantization runs strictly per expert on GPU; the paper's
+about 18 hours. Quantization runs strictly per expert on GPU; the paper's
 numbers were measured on an RTX 4080 Laptop (12 GB, Ada, compute 8.9)
 under WSL2 Ubuntu 22.04.
 
@@ -67,7 +67,7 @@ python -c "import torch; \
 
 ## Quick start: load the pre-built checkpoint
 
-If you want the numbers but not the 12-hour run, the 4.5 GB quantized
+If you want the numbers but not the 18-hour run, the 4.5 GB quantized
 model is published on Hugging Face:
 
 ```bash
@@ -76,7 +76,7 @@ python -m src.eval.run_ppl --config 2bit_noft --dataset wikitext2
 python -m src.eval.run_ppl --config 2bit_noft --dataset c4
 ```
 
-PPL eval is ~20 minutes for both datasets on the 4080 Laptop.
+PPL eval is ~10 minutes for both datasets on the 4080 Laptop.
 
 ## Full reproduction (all three configs)
 

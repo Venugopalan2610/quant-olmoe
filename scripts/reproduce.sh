@@ -2,7 +2,7 @@
 # reproduce.sh — Full reproduction of QTIP-MoE Paper 1 results
 # Hardware: NVIDIA GPU with ≥12 GB VRAM (tested: RTX 4080 Laptop 12 GB)
 # OS: Linux or WSL2 (tested: Ubuntu 22.04 under WSL2)
-# Total wall time: ~12 hours end-to-end
+# Total wall time: ~18 hours end-to-end
 #
 # Usage:
 #   bash scripts/reproduce.sh [--skip-hessians] [--skip-quant] [--skip-eval]
