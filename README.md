@@ -22,7 +22,7 @@ under WSL2 Ubuntu 22.04.
 
 Zero-shot downstream accuracy (lm-eval-harness 0.4.11): HellaSwag
 acc_norm 64.8 (fp16 68.1), ARC-c 44.3 (46.1), ARC-e 67.9 (70.4),
-PIQA 77.9 (79.6). Full numbers in `paper/section_5_2_downstream_tasks.md`.
+PIQA 77.9 (79.6). Full numbers in the paper (Section 5.2).
 
 On-disk footprint: 3.3 GB for the 2-bit packed bitstream (8× compression
 on quantized tensors), 4.5 GB including the unquantized router + embeddings
@@ -259,11 +259,10 @@ report.
 │   ├── finetune/             Section 5.3 LUT FT sweep (negative result)
 │   ├── figures/              Figure 2 (routing), Figure 3 (kurtosis)
 │   └── tripwires/            development-time sanity checks
-├── fast-hadamard-transform/  upstream, BSD-3-Clause, built from source
-└── paper/                    paper section drafts (markdown)
+└── fast-hadamard-transform/  upstream, BSD-3-Clause, built from source
 ```
 
-The compiled LaTeX source of the paper is tracked separately in
+The LaTeX source of the paper is tracked separately in
 [`qtip-moe-paper`](https://github.com/<TODO-USER>/qtip-moe-paper).
 
 ## Citation
