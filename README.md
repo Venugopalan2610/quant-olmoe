@@ -1,4 +1,4 @@
-# qtip-olmoe
+# quant-olmoe
 
 2-bit weight-only quantization of
 [OLMoE-1B-7B](https://huggingface.co/allenai/OLMoE-1B-7B-0125) on a single
